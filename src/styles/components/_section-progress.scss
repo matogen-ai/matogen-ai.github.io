@@ -1,0 +1,60 @@
+.section-progress {
+  position: fixed;
+  top: 0;
+  left: 3.5rem;
+
+  display: none;
+  width: 2.5px;
+  height: 100vh;
+
+  background: rgba(241, 241, 241, 0.3);
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease-in-out;
+  will-change: opacity;
+
+  @media screen and (min-width: 640px) {
+    display: block;
+  }
+  
+  &.is-visible {
+    opacity: 0.9;   
+  }
+
+  .handle {
+    --section-size: calc(100vh / 6);
+    position: absolute;
+    top: calc((var(--section-size) * 0) + var(--section-size) * 0.5);
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 2.35rem;
+    aspect-ratio: 1;
+
+    border: 3px solid var(--blue-100);
+   
+    border-radius: 50%;
+    background: rgb(241, 241, 241);
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 0 24px var(--blue-100);
+
+    // transition: top 0.1s ease-in-out;
+    will-change: top;
+
+    cursor: grab;   
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: 2.5px;
+      height: 100vh;
+      bottom: 2.20rem;
+      left:50%;
+      transform: translate(-50%, 0);
+      background: rgb(241, 241, 241);
+    }
+  }
+}

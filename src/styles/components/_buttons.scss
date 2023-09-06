@@ -1,0 +1,27 @@
+.btn {
+  width: auto;
+  height: var(--btn-height);
+
+  padding: 0 1rem;
+
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  line-height: var(--btn-height);
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+.btn-outline {
+  border: 1px solid;
+  border-radius: calc(var(--btn-height) / 4); 
+
+  &-light {
+    color: var(--light);
+    border-color: var(--light);
+  }
+  
+  &:hover{
+    background-color: rgba(0.5, 0.5, 0.5, 0.5);
+    
+  }
+}

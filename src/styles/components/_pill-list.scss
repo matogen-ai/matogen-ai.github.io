@@ -1,0 +1,40 @@
+.pill-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+
+  margin: 0;
+  padding: 1.5rem 0;
+  list-style: none;
+
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 1.5rem;
+  }
+
+  .pill {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 80px;
+
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  &--outline {
+    .pill {
+      border: 1px solid var(--light);
+    }
+  }
+}

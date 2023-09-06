@@ -1,0 +1,56 @@
+// Plugins
+@import "./node_modules/normalize.css/normalize";
+
+// Variables, fonts, mixins
+@import "./styles/variables";
+@import "./styles/font/mona-sans";
+@import "./styles/utils/typography";
+@import "./styles/utils/themes";
+
+// Components
+@import "./styles/components/container";
+@import "./styles/components/navigation";
+@import "./styles/components/hero";
+@import "./styles/components/buttons";
+@import "./styles/components/logo-slider";
+@import "./styles/components/section";
+@import "./styles/components/section-progress";
+@import "./styles/components/card";
+@import "./styles/components/values";
+@import "./styles/components/panel";
+@import "./styles/components/technologies";
+@import "./styles/components/industries";
+@import "./styles/components/mission";
+@import "./styles/components/careers";
+@import "./styles/components/contact";
+@import "./styles/components/members";
+@import "./styles/components/footer";
+@import "./styles/components/philosophies";
+@import "./styles/components/reasons";
+@import "./styles/components/responsibilities";
+@import "./styles/components/list";
+@import "./styles/components/pill-list";
+@import "./styles/components/tabs";
+
+@import "./styles/components/division/hero";
+@import "./styles/components/division/intro";
+@import "./styles/components/division/more";
+
+@import "./styles/components/content-pages/intro";
+
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  line-height: 1.2;
+
+  scroll-behavior: smooth;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

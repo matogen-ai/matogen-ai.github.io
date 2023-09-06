@@ -1,0 +1,204 @@
+.industries {
+  .section-title {
+    padding-block-start: 2rem;
+  }  
+
+  .motion-scroller {
+    width: 100%;
+    .viewport {
+      overflow: hidden;
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding-bottom:3rem;
+
+        @media screen and (min-width: 680px) {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 0;
+        }
+
+        .item.open{
+          height:auto;
+        }
+
+        .item {
+          position: relative;
+          flex: 1 1 auto;
+          aspect-ratio: unset;
+          width: 100%;
+          height: 6rem;
+
+          background-size: cover;
+          background-position: center;
+
+          overflow: hidden;
+
+
+          @media screen and (min-width: 680px) {
+            flex: 0 0 40%;
+            aspect-ratio: 2 / 3;
+            width: auto;
+            height: auto;
+          }
+          @media screen and (min-width: 800px) {
+            flex: 0 0 30%;
+          }
+          @media screen and (min-width: 1200px) {
+            flex: 0 0 20%;
+          }
+          @media screen and (min-width: 2000px) {
+            flex: 0 0 16%;
+          }
+
+          .title {
+            position: static;
+            bottom: 0;
+            left: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 6rem;
+
+            border: 1px solid transparent;
+
+            font-size: 1.4rem;
+            font-weight: 500;
+
+            color: var(--light);
+
+            @media screen and (min-width: 680px) {
+              position: absolute;
+              width: 100%;
+              height: 20%;
+              border: 1px solid var(--blue-100);
+            }
+
+            span {
+              position: relative;
+              z-index: 2;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+
+              width: 100%;
+              height: 0;
+
+              background: var(--blue-100);
+              opacity: 0;
+
+              will-change: opacity;
+              transition: opacity 0.2s ease-in-out;
+
+              @media screen and (min-width: 680px) {
+                height: 100%;
+              }
+            }
+          }
+          .description {
+            position: static;
+            top: 0;
+            left: 0;
+
+            translate: 0 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: auto;
+
+            padding: 1.5rem;
+
+            background: rgba(0, 0, 0, 0.6);
+            color: var(--light);
+
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+
+            will-change: translate;
+            transition: translate 0.2s ease-in-out;
+
+            @media screen and (min-width: 680px) {
+              position: absolute;
+              translate: 0 -100%;
+              height: 80%;
+              // padding: 3rem;
+              font-size: 1.1rem;             
+            }
+            @media screen and (min-width: 800px) {
+              flex: 0 0 30%;
+              font-size: 1.1rem;
+            }
+            @media screen and (min-width: 1100px) {
+              flex: 0 0 25%;
+              font-size: 1.1rem;
+            }
+            @media screen and (min-width: 2000px) {
+              flex: 0 0 20%;
+              font-size: 1.1rem;
+            }
+
+            @media screen and (min-width: 2700px) {
+              flex: 0 0 15%;
+              font-size: 1.5rem;
+            }
+          }
+          @media screen and (min-width: 680px) {
+            &:hover{
+            height: auto;
+            .title {
+              font-weight: 600;
+              &::after {
+                opacity: 0.6;
+              }
+            }
+            .description {
+              translate: 0 0;
+            }}
+          }
+
+          &--finance {
+            background-image: url("/finance.webp");
+          }
+          &--education {
+            background-image: url("/education.webp");
+          }
+          &--mining {
+            background-image: url("/mining.webp");
+          }
+          &--manufacturing {
+            background-image: url("/manufacturing.webp");
+          }
+          &--agriculture {
+            background-image: url("/agriculture.webp");
+          }
+          &--transport {
+            background-image: url("/transport-telementry.webp");
+          }
+          &--tourism {
+            background-image: url("/tourism.webp");
+          }
+          &--telecoms {
+            background-image: url("/telecoms.webp");
+          }
+        }
+      }
+    }
+  }
+  
+}

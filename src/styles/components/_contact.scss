@@ -1,0 +1,19 @@
+.contact {
+  .cards {
+    padding-bottom:3rem;
+
+    @media screen and (min-width: 2000px) {
+      margin: 0 15em
+    }
+    
+    .card {
+      background: var(--light);
+      color: var(--blue-100);
+
+      &:hover {
+        background: var(--blue-100);
+        color: var(--light);
+      }
+    }
+  }
+}
