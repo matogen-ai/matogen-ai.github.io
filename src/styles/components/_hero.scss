@@ -10,36 +10,70 @@
 
   margin-block-start: calc(var(--nav-height) * -1);
 
-  background: url("/hero.webp");
+
+  background-color: black;
   background-size: auto 100%;
   background-position: 50% 60%;
   background-repeat: no-repeat;
 
   scroll-snap-align: start;
 
-    @media screen and (max-width: 840px) {
+  @media screen and (max-width: 840px) {
     background-size: auto 120%;
-    background-position: 50% 100% ;
-    
+    background-position: 50% 100%;
+
   }
+
   @media screen and (min-width: 1100px) {
     background-size: 150% auto;
   }
+
   @media screen and (min-width: 1490px) {
     background-size: 110% auto;
   }
 
-  
+  /* CSS for video and overlay */
+  .video-home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Adjust the height as needed */
+    overflow: hidden;
+  }
+
+  .video-home video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the entire container */
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the color and opacity as needed */
+  }
+
+
 
   &-content {
     // position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     width: 100%;
-    height: 100%;
+    height: calc(100vh - var(--nav-height));
+    margin-bottom: 5rem;
+    position: absolute;   
+    z-index: 1; 
+    
+
 
     .logo {
       display: flex;
@@ -52,11 +86,16 @@
       position: relative;
       width: calc(100% - 1rem);
 
-         
+
 
       @media screen and (min-width: 680px) {
-        flex: 0 0 60vh;
-        width: calc((1147 / 1920) * 100vw);
+
+        width: calc((1147 / 1920) * 90vw);
+      }
+
+      @media screen and (min-width: 2000px) {
+
+        width: calc((1147 / 1920) * 75vw);
       }
 
       img {
@@ -70,13 +109,11 @@
         }
       }
 
-      .slogan {
-        font-size: 1.25rem;
-        @media screen and (min-width: 680px) {
-          font-size: 1.7rem;
-        }
-      }
+
+
+
     }
+
     .content {
       position: relative;
       display: flex;
@@ -88,7 +125,7 @@
       flex: 0 0 30vh;
       width: 100%;
 
-      margin-block-start: 3rem;
+      margin-block-start: 1rem;
       padding-block: 2rem;
 
       color: var(--light);
@@ -98,6 +135,7 @@
         flex: 0 0 30vh;
         padding-block: 0;
       }
+
       @media screen and (min-width: 2000px) {
         flex: 0 0 24vh;
         padding-block: 0;
@@ -115,7 +153,7 @@
         width: 100%;
         height: auto;
 
-        background: hsla(0 0% 0% / 0.44);
+        background: #00000084;
       }
 
       h1,
@@ -130,7 +168,7 @@
         margin-top: 30px;
         font-size: 2rem;
         font-weight: 350;
-        
+
 
         line-height: 1.5;
 
@@ -138,33 +176,20 @@
           max-width: 60%;
           font-size: 1.3rem;
         }
+
         @media screen and (min-width: 840px) {
-          max-width: 50ch;
+          max-width: 65%;
           font-size: 1.5rem;
         }
-        @media screen and (max-width: 840px) {
-          max-width: 50ch;
-          font-size: 1.0rem;
-          padding-left: 30px;
-          padding-right: 30px;
+
+        @media screen and (min-width: 1100px) {
+          max-width: 55%;
+          font-size: 1.5rem;
         }
+
       }
     }
   }
 
-  &-logo-slider {
-    width: 100%;  
-       
-    
-    div{
-      img {
-        
-        height:50px;
 
-        @media screen and (min-width: 480px) {
-          height:70px;
-        }
-      }
-    }
-  }
 }

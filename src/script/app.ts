@@ -6,7 +6,7 @@ export class App {
   init() {
     this.preloader()
     this.heroAnimation();
-    this.initSlick();
+    // this.initSlick();
     this.checkScrollPosition();
     this.initIndustryScroller()
     this.initIndustryExpander();

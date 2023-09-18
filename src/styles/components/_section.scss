@@ -4,16 +4,17 @@
   justify-content: flex-start;
   align-items: center;
 
-  padding-block: 1.5rem;
+  
 
   text-align: center;
+  width: 100%;
 
   @media screen and (min-width: 480px) {
-    padding-block: 1.5rem;
+    
   }
 
   @media screen and (min-width: 680px) {
-    padding-block: 1.5rem;
+    
     scroll-snap-align: start;
   }
 
@@ -22,9 +23,10 @@
     padding-block: 1.5rem;
     font-size: 2.5rem;
     text-align: center;
+    margin-block-start:2.5rem;
 
     @media screen and (min-width: 480px) {
-      padding-block: 2.5rem;
+      padding-block: 3rem;
       font-size: 3rem;
     }
 
@@ -51,6 +53,33 @@
     }
   }
 
+  &--div-light {
+    background-color: rgb(238, 238, 238);
+    color: var(--blue-200);
+
+    .panel-content {
+      background: hsla(0, 0%, 100%, 0.773);
+    }
+  }
+
+  &--insight-blue {
+    background-color: rgb(255, 255, 255);
+    color: var(--light-100);
+
+    .panel {
+      border: 1px solid var(--blue-200)
+    }
+
+    .panel-content {
+      background:#27A8E0;
+    }
+
+    .panel-footer {
+      color: var(--blue-200);
+      // background-color: var(--light-100);
+    }
+  }
+
   &--dark {
     background-color: var(--dark-300);
     color: var(--light);
@@ -62,7 +91,7 @@
   }
 
   &--blue-200 {
-    background-color: var(--blue-200);
+    background-color: #27A8E0;
     color: var(--light);
   }
 
@@ -114,7 +143,7 @@
   }
 }
 
-#divisions {
+#our-work {
 
   .cards {
     margin-bottom: 50px;
