@@ -125,8 +125,8 @@
       flex: 0 0 30vh;
       width: 100%;
 
-      margin-block-start: 1rem;
-      padding-block: 2rem;
+      margin-block-start: 3rem;
+      padding-block: 1rem;
 
       color: var(--light);
       text-align: center;
@@ -134,10 +134,11 @@
       @media screen and (min-width: 840px) {
         flex: 0 0 30vh;
         padding-block: 0;
+       
       }
 
       @media screen and (min-width: 2000px) {
-        flex: 0 0 24vh;
+        flex: 0 0 15vh;
         padding-block: 0;
       }
 
@@ -153,7 +154,7 @@
         width: 100%;
         height: auto;
 
-        background: #00000084;
+        background: #00000079;
       }
 
       h1,

@@ -1,0 +1,18 @@
+.map-container {
+  position: relative;
+  width: 1000px;
+  height: 500px;
+}
+
+.map-container svg {
+  height: 100%;
+  width: 100%;
+}
+
+.path-transition {
+  transition: transform 0.5s;
+}
+
+.location-info {
+  
+}

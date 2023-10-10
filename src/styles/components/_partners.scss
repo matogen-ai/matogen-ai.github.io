@@ -1,11 +1,12 @@
 .partners {
  
   .cards {
-    margin-block-end: 2rem;    
+    margin-block-end: 5rem;    
+    gap: 3.8rem;
 
     .card {
       // --card-size: calc((100% - (1.875rem * 1)) / 2);
-      --card-size: 10rem;
+      --card-size: 15rem;
 
       display: flex;
       flex-direction: column;

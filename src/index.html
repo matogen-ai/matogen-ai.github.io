@@ -71,11 +71,10 @@
 
         <ul>
             <li><a class="js-nav-item" href="/index.html#home">Home</a></li>
-            <li><a class="js-nav-item" href="/#divisions">Divisions</a></li>
-            <li><a class="js-nav-item" href="/#contact">Services</a></li>
-            <li><a class="js-nav-item" href="/#about">About Us</a></li>
+            <li><a class="js-nav-item" href="/#our-work">Our Work</a></li>
+            <li><a class="js-nav-item" href="/#partners">Partners</a></li>
             <li><a class="js-nav-item" href="/#careers">Careers</a></li>
-            <li><a class="js-nav-item" href="/social-responsibility/">Social Responsibility</a></li>
+            <li><a class="js-nav-item" href="/contact-us/">Contact us</a></li>
         </ul>
     </nav>
     <!-- #region Hero -->
@@ -113,15 +112,15 @@
         <h2 class="section-title">Our Work</h2>
 
         <div class="cards">
-            <a href="#corporate-web-software-development" class="card">
+            <a href="#capabilities" class="card">
                 <h3 class="label">Capabilities</h3>
 
             </a>
-            <a href="#geospatial-software-engineering" class="card">
+            <a href="#insights" class="card">
                 <h3 class="label">Insights</h3>
 
             </a>
-            <a href="#data-sciences-predictive-modeling-services" class="card">
+            <a href="#industries" class="card">
                 <h3 class="label">Industries</h3>
 
             </a>
@@ -170,7 +169,7 @@
     <!-- #endregion -->
 
     <div class="division-sections" id="division-sections">
-        <h2 class="section-title" style=" color: #27A8E0">Capabilities</h2>
+        <h2 id="capabilities" class="section-title" style=" color: #27A8E0">Capabilities</h2>
         <div class="section-progress">
             <div class="handle"></div>
         </div>
@@ -343,8 +342,9 @@
 
 
     <!-- # Insights-->
-    <h2 class="section-title" style=" color: #27A8E0">Insights</h2>
-    <section id="insights" class="section section--insight-blue">
+
+    <section class="section section--insight-blue">
+        <h2 id="insights" class="section-title" style=" color: #27A8E0">Insights</h2>
 
         <div class="container container--offset">
             <div class="panel panel--with-footer">
@@ -369,7 +369,7 @@
     <!-- #endregion -->
 
     <!-- #region partners -->
-    <h2 class="section-title" style=" color: #27A8E0">Our Partners</h2>
+
     <section id="partners" class="section section--blue-200 partners">
         <div class="container">
             <h2 class="section-title">Proud to collaborate with the best</h2>
@@ -392,23 +392,66 @@
 
 
 
-    <h2 class="section-title" style="color: #27A8E0">What people say about us</h2>
+    <h2 id="testimonials" class="section-title" style="color: #27A8E0">What people say about us</h2>
     <div class="testimonial">
         <div class="quote-section">
             <div class="quote-marks">
                 <img src="/quote_marks.svg" alt="quotation-marks" />
             </div>
-            <div class="quote-text">
+
+            <div class="carousel-container">
+                <div class="quote">
+                    <p>”The Matogen AI team are really easy to work with and it feels like the consultants are alongside
+                        my staff rather than separate to them. This makes it easy to bring together a business need with
+                        super smart data scientists – which typically is where things fall apart.”</p>
+                    <p class="author">Chief of Data Science - Major listed South African telecoms companyPredictive
+                        modelling, data wrangling, feature creation
+                    </p>
+                </div>
+                <div class="quote">
+                    <p>“Baanbrekerwerk”</p>
+                    <p class="author">
+                        Client within the Agricultural SectorPredictive modelling</p>
+                </div>
+                <div class="quote">
+                    <p>”… extremely professional and not only did exactly what we asked for, they did MUCH MORE! I am
+                        looking forward to a long business relationship..”</p>
+                    <p class="author">US client in the real estate industryAPI data extraction project</p>
+                </div>
+                <div class="quote">
+                    <p>”Professional and relevant advice. Matogen AI takes the time to apply themselves to our specific
+                        needs and think deeply about the modelling challenges we face.”</p>
+                    <p class="author">
+                        Commercial lending- Risk modelling</p>
+                </div>
+
+                <div class="controls">
+                    <button class="carousel-btn" id="prevBtn">
+                        <img src="/previous_left.svg" alt="quotation-marks" />
+                    </button>
+                    <button class="carousel-btn" id="nextBtn">
+                        <img src="/next_right.svg" alt="quotation-marks" />
+                    </button>
+                </div>
+                <!-- Add more quotes here as needed -->
+            </div>
+
+
+
+
+
+
+            <!-- <div class="quote-text">
                 <p>
                     Jacobus and his team are extremely professional and not only did exactly what we asked for, they did
                     MUCH MORE!! I am looking forward to a long business relationship with Jacobus and his team!!!!
                 </p>
-            </div>
-            <div class="quote-marks">
+            </div> -->
+            <div class="quote-marks right">
                 <img src="/quote_marks.svg" alt="quotation-marks" />
             </div>
         </div>
-        <div class="calousel"></div>
+        <div class="carousel-nav"></div>
     </div>
 
     <section class="section section--light">
@@ -434,7 +477,8 @@
                     </div>
                     <div class="philosophy-title">Vision</div>
                     <div class="philosophy-description">
-                        <strong style=" font-weight:300;">Elevating Businesses:</strong> We empower clients to achieve their goals by applying pertinent technologies, techniques, skills, and experience.
+                        <strong style=" font-weight:300;">Elevating Businesses:</strong> We empower clients to achieve
+                        their goals by applying pertinent technologies, techniques, skills, and experience.
                     </div>
                 </div>
 
@@ -444,9 +488,22 @@
                     </div>
                     <div class="philosophy-title">Purpose</div>
                     <div class="philosophy-description">
-                        <strong style=" font-weight:300;">Driving Exponential Growth:</strong> Harnessing the potential of artificial intelligence to drive innovation, efficiency, and transformative outcomes for businesses and individuals.
+                        <strong style=" font-weight:300;">Driving Exponential Growth:</strong> Harnessing the potential
+                        of artificial intelligence to drive innovation, efficiency, and transformative outcomes for
+                        businesses and individuals.
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 id="testimonials" class="section-title" style="color: #27A8E0">Locations we've done work in</h2>
+    <section id="locations" class="section section--light">
+        <!-- handlebars partial: see src/partials -->
+        <div class="map-container">
+            {{> map-svg }}
+            <div id="location-info" class="location-info">
+                <div/>
             </div>
         </div>
     </section>
@@ -547,42 +604,49 @@
         <div class="container">
             <div class="grid">
                 <div class="divisions">
-                    <h4>Divisions</h4>
+                    <h4>Our Work</h4>
                     <ul>
                         <li>
-                            <a target="_blank" href="https://cwd.matogen.com">Corporate Web & Software Development</a>
+                            <a target="_blank" href="/#capabilities">Capabilities</a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://tr.matogen.com">Geospatial Software Engineering</a>
+                            <a target="_blank" href="/#insights">Insights</a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://ai.matogen.com">Data- and Decision Science Consulting
-                                Services</a>
+                            <a target="_blank" href="/#industries">Industies</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="partners">
+                    <h4>Partners</h4>
+                    <ul>
+                        <li>
+                            <a target="_blank">Databricks</a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://tel.matogen.com">Telematics Logistics Software
-                                Engineering</a>
+                            <a target="_blank" href="/#insights">Praexia</a>
                         </li>
-                        <li><a target="_blank" href="https://digital.matogen.com">Digital Marketing Service</a></li>
-                        <li>
-                            <a target="_blank" href="https://zebra.matogen.com">Enterprise Resource Planning, Reporting,
-                                Scheduling</a>
-                        </li>
+
+
                     </ul>
                 </div>
                 <div class="resources">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="/#industries">Areas of expertise</a></li>
-                        <li><a href="/#careers">Careers</a></li>
-                        <li><a href="/#contact">Contact us</a></li>
-                        <li><a href="/#leadership">Our Leadership</a></li>
+                        <li><a href="/#contact-us">Contact us</a></li>
+                        <li><a href="/#testimonials">Testimonials</a></li>
+
                     </ul>
                 </div>
+
                 <div class="about">
                     <h4>About</h4>
                     <ul>
-                        <li><a href="https://cwd.matogen.com/about-us/about-our-company">Our Story</a></li>
+                        <li><a href="/#map">Locations we've worked in</a></li>
+                        <li><a href="/#leadership">Our Team</a></li>
+                        <li><a href="/#leadership">LINKEDIN LINK INSERT</a></li>
                     </ul>
                 </div>
             </div>
@@ -593,7 +657,6 @@
                 </div>
     </section>
     <!-- #endregion -->
-
 
 
 

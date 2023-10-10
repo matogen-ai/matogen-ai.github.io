@@ -1,6 +1,8 @@
 import { HoverEffect } from "./hover";
 import { CurrentDates } from "./current-dates";
 import { MobileBurgerMenu } from "./mobile-burger-menu";
+import { Carousel } from "./carousel";
+import { SvgMap } from "./svg-map"
 
 export class App {
   init() {
@@ -10,28 +12,32 @@ export class App {
     this.checkScrollPosition();
     this.initIndustryScroller()
     this.initIndustryExpander();
-    this.initBioViewer();    
+    this.initBioViewer();
     this.updateDates();
     
+
     new MobileBurgerMenu().initMobileMenu();
     new HoverEffect(".card");
+    new Carousel(5000);
+    new SvgMap();
   }
 
+
   private preloader() {
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const loadingScreen = document.getElementById("preloader");
 
-      if(!loadingScreen ) return;
-      setTimeout(function() {
+      if (!loadingScreen) return;
+      setTimeout(function () {
         loadingScreen.style.animation = "bounce 2s infinite";
-        setTimeout(function() {
+        setTimeout(function () {
           loadingScreen.style.display = "none";
         }, 1500); // Adjust the timing here to match the animation duration
       }, 700);
 
-      
+
     });
-    
+
   }
 
   private heroAnimation() {
@@ -86,12 +92,12 @@ export class App {
   }
 
   private checkScrollPosition() {
-    
+
     let isDragging = false;
     let startY = 0;
     let startTop = 0;
 
-    
+
     $(".handle").on("mousedown", (e) => {
       isDragging = true;
       startY = e.clientY;
@@ -99,7 +105,7 @@ export class App {
       $('.handle').css('cursor', 'grabbing')
     });
 
-   
+
     $(document).on("mousemove", (e) => {
       if (isDragging) {
         e.preventDefault();
@@ -107,30 +113,30 @@ export class App {
         const newTop = startTop + offsetY;
 
         const vh = window.innerHeight
-        const minTop = (vh/6)/2;
+        const minTop = (vh / 6) / 2;
         const maxTop = vh;
         const clampedTop = Math.min(maxTop, Math.max(minTop, newTop));
 
-       
+
         $(".handle").css("top", clampedTop);
 
-        
+
         const divisionSections = $("#division-sections")?.offset()?.top || 0;
         const divisionSectionsHeight = $("#division-sections").outerHeight() || 1;
         const scrollPosition = ((clampedTop - minTop) / (maxTop - minTop)) * divisionSectionsHeight + divisionSections;
-        
+
         window.scrollTo(0, scrollPosition);
       }
     });
 
-   
+
     $(document).on("mouseup", () => {
       isDragging = false;
       $('.handle').css('cursor', 'grab')
 
     });
 
-    
+
     document.addEventListener("scroll", () => {
       const scroll = $(window).scrollTop() || 0;
       const divisionSections = $("#division-sections")?.offset()?.top;
@@ -148,7 +154,7 @@ export class App {
       }
 
       const vh = window.innerHeight
-      const firstPosition = (vh/6)/2;
+      const firstPosition = (vh / 6) / 2;
       const lastPosition = vh;
 
       const currentPosition = ((scroll - divisionSections) / divisionSectionsHeight) * (lastPosition - firstPosition) + firstPosition;
@@ -174,24 +180,23 @@ export class App {
     });
   }
 
-  
+
 
   private initIndustryExpander() {
     if (window.innerWidth <= 640) { // mobile breakpoint
       const itemElements = document.querySelectorAll(".item");
       itemElements.forEach((item) => {
         const title = item.querySelector(".title");
-  
+
         if (title) {
 
           title.addEventListener("click", (e) => {
             e.preventDefault();
-            
-            itemElements.forEach((itemInner)=>{
-              if(itemInner == item){
+
+            itemElements.forEach((itemInner) => {
+              if (itemInner == item) {
                 itemInner.classList.toggle("open")
-              }else
-              {
+              } else {
                 itemInner.classList.remove('open')
               }
             })
@@ -200,9 +205,9 @@ export class App {
       });
     }
   }
-  
 
-  
+
+
 
   // /**
   //  * Update dates
@@ -229,6 +234,8 @@ export class App {
       parent.addClass("is-expanded");
     });
   }
+
+  
 
 
 }

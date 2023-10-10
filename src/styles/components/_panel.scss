@@ -70,7 +70,7 @@
     }
 
     p {
-      max-width: min(60ch, 100%);
+      max-width: min(50ch, 100%);
 
       font-size: 1rem;
       line-height: 1.5;
@@ -204,7 +204,7 @@
   &--with-footer {
     @media screen and (min-width: 840px) {
       grid-template-columns: 3fr 2fr;
-      grid-template-rows: 4fr 1fr;
+      grid-template-rows: 3fr 1fr;
     }
 
     .panel-media {

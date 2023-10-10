@@ -1,0 +1,62 @@
+
+.carousel-container {
+    width: 100%;
+    // ***************alles shift agv verskillende groottes**********
+    max-width: 600px;
+  
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+   
+    border-radius: 5px;
+   
+    text-align: center;
+}
+
+.carousel-btn{
+   
+   background-color: #fff;
+    
+}
+
+.controls{
+    display: flex;
+    justify-content: space-around;
+}
+
+carousel-btn:hover {
+    background-color: #e9e9e9;
+}
+
+
+
+.quote {
+    display: none; /* Hide all quotes by default */
+    padding: 20px;
+}
+
+.quote p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.author {
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+/* Add animation for the carousel */
+.quote.active {
+    display: block;
+    animation: fadeInOut 5s linear infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+}
