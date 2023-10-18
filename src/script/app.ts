@@ -58,38 +58,38 @@ export class App {
     });
   }
 
-  private initSlick() {
-    ($(".logo-slider") as any).slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 3000,
-      arrows: false,
-      autoplaySpeed: 0,
-      variableWidth: true,
+  // private initSlick() {
+  //   ($(".logo-slider") as any).slick({
+  //     slidesToShow: 5,
+  //     slidesToScroll: 1,
+  //     autoplay: true,
+  //     speed: 3000,
+  //     arrows: false,
+  //     autoplaySpeed: 0,
+  //     variableWidth: true,
 
-      responsive: [
-        {
-          breakpoint: 1100,
-          settings: {
-            slidesToShow: 4,
-          },
-        },
-        {
-          breakpoint: 680,
-          settings: {
-            slidesToShow: 3,
-          },
-        },
-        {
-          breakpoint: 580,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    });
-  }
+  //     responsive: [
+  //       {
+  //         breakpoint: 1100,
+  //         settings: {
+  //           slidesToShow: 4,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 680,
+  //         settings: {
+  //           slidesToShow: 3,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 580,
+  //         settings: {
+  //           slidesToShow: 1,
+  //         },
+  //       },
+  //     ],
+  //   });
+  // }
 
   private checkScrollPosition() {
 
