@@ -9,21 +9,15 @@
   background-position: center;
   background-size: cover;
 
-  &--cwd {
-    background-image: url("/cwd.webp");
-  }
+ 
   &--email-disclaimers {
     background-image: url("/email-disclaimers.webp");
   }
   &--terms-of-service {
     background-image: url("/terms-of-service.webp");
   }
-  &--geospatial {
-    background-image: url("/geospatial.webp");
-  }
-  &--ai {
-    background-image: url("/ai.webp");
-  }
+  
+  
 
   h1 {
     margin: 0;

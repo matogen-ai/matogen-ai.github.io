@@ -173,30 +173,18 @@
             }}
           }
 
-          &--finance {
+          &--fintech {
             background-image: url("/finance.webp");
           }
-          &--education {
-            background-image: url("/education.webp");
-          }
-          &--mining {
-            background-image: url("/mining.webp");
-          }
-          &--manufacturing {
-            background-image: url("/manufacturing.webp");
-          }
-          &--agriculture {
+         
+          &--agritech {
             background-image: url("/agriculture.webp");
           }
-          &--transport {
-            background-image: url("/transport-telementry.webp");
-          }
-          &--tourism {
+
+          &--healthcare{
             background-image: url("/tourism.webp");
           }
-          &--telecoms {
-            background-image: url("/telecoms.webp");
-          }
+          
         }
       }
     }

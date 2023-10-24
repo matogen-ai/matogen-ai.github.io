@@ -121,8 +121,8 @@ export class App {
         $(".handle").css("top", clampedTop);
 
 
-        const divisionSections = $("#division-sections")?.offset()?.top || 0;
-        const divisionSectionsHeight = $("#division-sections").outerHeight() || 1;
+        const divisionSections = $("#our-work-section")?.offset()?.top || 0;
+        const divisionSectionsHeight = $("#our-work-section").outerHeight() || 1;
         const scrollPosition = ((clampedTop - minTop) / (maxTop - minTop)) * divisionSectionsHeight + divisionSections;
 
         window.scrollTo(0, scrollPosition);
@@ -139,8 +139,8 @@ export class App {
 
     document.addEventListener("scroll", () => {
       const scroll = $(window).scrollTop() || 0;
-      const divisionSections = $("#division-sections")?.offset()?.top;
-      const divisionSectionsHeight = $("#division-sections").outerHeight();
+      const divisionSections = $("#our-work-section")?.offset()?.top;
+      const divisionSectionsHeight = $("#our-work-section").outerHeight();
 
       if (!scroll || !divisionSections || !divisionSectionsHeight) {
         return;

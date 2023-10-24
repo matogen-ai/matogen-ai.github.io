@@ -18,7 +18,6 @@
 @import "./styles/components/card";
 @import "./styles/components/values";
 @import "./styles/components/panel";
-@import "./styles/components/technologies";
 @import "./styles/components/industries";
 @import "./styles/components/mission";
 @import "./styles/components/partners";
@@ -26,10 +25,7 @@
 @import "./styles/components/members";
 @import "./styles/components/footer";
 @import "./styles/components/philosophies";
-@import "./styles/components/reasons";
-@import "./styles/components/responsibilities";
-@import "./styles/components/list";
-@import "./styles/components/pill-list";
+
 @import "./styles/components/tabs";
 @import "./styles/components/youtube";
 @import "./styles/components/carousel";
@@ -38,11 +34,11 @@
 @import "./styles/components/contact-us";
 
 
-@import "./styles/components/division/hero";
-@import "./styles/components/division/intro";
-@import "./styles/components/division/more";
+@import "./styles/components/pages/hero";
+@import "./styles/components/pages/intro";
+@import "./styles/components/pages/more";
 
-@import "./styles/components/content-pages/intro";
+
 
 
 body {
