@@ -1,0 +1,402 @@
+//blah - haal uit
+.section{
+  //margin-bottom: 1rem;
+}
+
+.button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 15px;
+  border: none;
+  background-color: var(--blue-200);
+  // background-color: #6c757d; /* color for .btn-secondary in Bootstrap */
+}
+
+
+.insights {
+      
+    .section-title {
+      padding-block-start: 2rem;
+    }  
+  
+    .motion-scroller {
+      width: 100%;
+      .viewport {
+        overflow: hidden;
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 0.5rem;
+          // padding-bottom:1rem;
+  
+          @media screen and (min-width: 680px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 0;
+          }
+  
+          .item.open{
+            height:auto;
+          }
+  
+          .item {
+            position: relative;
+            flex: 1 1 auto;
+            aspect-ratio: unset;
+            width: 100%;
+            height: 6rem;
+  
+            background-size: cover;
+            background-position: center;
+  
+            overflow: hidden;
+  
+  
+            @media screen and (min-width: 680px) {
+              flex: 0 0 40%;
+              aspect-ratio: 2 / 3;
+              width: auto;
+              height: auto;
+            }
+            @media screen and (min-width: 800px) {
+              flex: 0 0 30%;
+            }
+            @media screen and (min-width: 1200px) {
+              flex: 0 0 20%;
+            }
+            @media screen and (min-width: 2000px) {
+              flex: 0 0 16%;
+            }
+  
+            .title {
+              position: static;
+              bottom: 0;
+              left: 0;
+  
+              display: flex;
+              justify-content: center;
+              align-items: center;
+  
+              width: 100%;
+              height: 6rem;
+  
+              border: 1px solid transparent;
+  
+              font-size: 1.4rem;
+              font-weight: 500;
+  
+              color: var(--light);
+  
+              @media screen and (min-width: 680px) {
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                border: 1px solid var(--blue-100);
+              }
+  
+              span {
+                position: relative;
+                z-index: 2;
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+  
+                width: 100%;
+                height: 0;
+  
+                background: var(--blue-100);
+                opacity: 0;
+  
+                will-change: opacity;
+                transition: opacity 0.2s ease-in-out;
+  
+                @media screen and (min-width: 680px) {
+                  height: 100%;
+                }
+              }
+            }
+            .description {
+              position: static;
+              top: 0;
+              left: 0;
+  
+              translate: 0 0;
+  
+              display: flex;
+              justify-content: center;
+              align-items: center;
+  
+              width: 100%;
+              height: auto;
+  
+              padding: 1.5rem;
+  
+              background: rgba(0, 0, 0, 0.6);
+              color: var(--light);
+  
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.5;
+  
+              will-change: translate;
+              transition: translate 0.2s ease-in-out;
+
+              display: flex; 
+              flex-direction: column;
+  
+              @media screen and (min-width: 680px) {
+                position: absolute;
+                translate: 0 -100%;
+                height: 80%;
+                // padding: 3rem;
+                font-size: 1.1rem;             
+              }
+              @media screen and (min-width: 800px) {
+                flex: 0 0 30%;
+                font-size: 1.1rem;
+              }
+              @media screen and (min-width: 1100px) {
+                flex: 0 0 25%;
+                font-size: 1.1rem;
+              }
+              @media screen and (min-width: 2000px) {
+                flex: 0 0 20%;
+                font-size: 1.1rem;
+              }
+  
+              @media screen and (min-width: 2700px) {
+                flex: 0 0 15%;
+                font-size: 1.5rem;
+              }
+            }
+            @media screen and (min-width: 680px) {
+              &:hover{
+              height: auto;
+              .title {
+                font-weight: 600;
+                &::after {
+                  opacity: 0.6;
+                }
+              }
+              .description {
+                translate: 0 0;
+              }
+              .xxblah {
+                translate: 0 0;
+              }}
+            }
+  
+            &--covid {
+              background-image: url("/covid-models-740x690.jpg");
+            }
+            
+           
+            &--orthopaedic {
+              background-image: url("/orthopedic-procedure-predictions-740x690.jpg");
+            }
+  
+            &--agriculture{
+              background-image: url("/Agri-3-0-Predictive-analytics-in-agriculture-740x690.jpg");
+            }
+
+            &--gamification{
+              background-image: url("/MAI4-x-ConfirmU-01-smaller-1-740x690.jpg");
+            }
+
+            &--machine-learning{
+              background-image: url("/predicting-churn-740x690.jpg");
+            }
+
+            &--gamefication-marketing{
+              background-image: url("/gamefication-marketing-740x690.jpg");
+            }
+
+            &--medical-edutainment-platform{
+              background-image: url("/junior-medics-740x690.jpg");
+            }
+
+            &--dept-collection{
+              background-image: url("/dept-collection-analytics-740x690.jpg");
+            }
+
+            &--behavioural-science{
+              background-image: url("/behavioural-science-740x690.jpg");
+            }
+
+            &--tuberculosis-monitoring{
+              background-image: url("/tuberculosis-monitoring-740x690.jpg");
+            }
+
+            &--banking-tech{
+              background-image: url("/banking-tech-740x690.jpg");
+            }
+
+            &--plan-disease{
+              background-image: url("/plan-disease-image-740x690.jpg");
+            }
+
+            &--cannibalisation{
+              background-image: url("/cannibalisation-in-telecoms-740x690.jpg");
+            }
+
+            &--big-data-health-care{
+              background-image: url("/big-data-health-care-740x690.png");
+            }
+            
+            &--engineering-credit-data{
+              background-image: url("/engineering-credit-data-740x690.jpg");
+            }
+
+            &--irrigation{
+              background-image: url("/irrigation-model-1200x565-1-740x690.jpg");
+            }
+
+            &--neuroscience{
+              background-image: url("/neuroscience-feature-740x690.jpg");
+            }
+
+            &--commercial-lending{
+              background-image: url("/commercial-lending-740x690.jpg");
+            }
+            
+            &--health-industry{
+              background-image: url("/health-industry-business-case-740x690.jpg");
+            }
+
+            &--right-party{
+              background-image: url("/right-party-contact-740x690.jpg");
+            }
+
+            &--agri-harvest-date-prediction{
+              background-image: url("/Agri-3-0-Harvest-date-prediction-740x690.jpg");
+            }
+
+            &--alternative-data-credit-scoring{
+              background-image: url("/alternative-data-credit-scoring-740x690.jpg");
+            }
+
+            &--agriweather-plant-disease{
+              background-image: url("/Agriweather-plant-disease-740x690.jpg");
+            }
+
+            &--automated-crypto-trading{
+              background-image: url("/automated-crypto-trading-system-image2-740x690.jpg");
+            }
+            
+            &--plant-nutrient-deficiency{
+              background-image: url("/plant-nutrient-deficiency-740x690.jpg");
+            }
+
+            &--oncology-data{
+              background-image: url("/oncology-data-740x690.jpg");
+            }
+          }
+        }
+      }
+    }
+
+    .grid {
+      padding-bottom: 3rem;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+
+      width: 100%;
+
+      @media screen and (min-width: 580px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media screen and (min-width: 960px) {
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+      }
+
+      h4 {
+        margin-block: 0 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: left;
+
+        @media screen and (min-width: 680px) {
+          font-size: 1.5rem;
+        }
+        @media screen and (min-width: 840px) {
+          font-size: 1.75rem;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          text-align: left;
+          padding: 0.35rem 0;
+
+          @media screen and (min-width: 680px) {
+            padding:0.1rem 0;            
+          }
+
+          a {
+            position: relative;
+            font-size:1.2rem;
+            text-decoration: none;
+
+            color: var(--light);
+            
+
+            @media screen and (min-width: 680px) {
+              font-size: 1.2rem;
+              
+            }
+            @media screen and (min-width: 840px) {
+              font-size: 1.25rem;
+            }
+
+            @media screen and (min-width: 2700px) {
+              font-size: 1.4rem;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 0;
+
+              width: 0;
+              height: 2px;
+
+              background: var(--light);
+            }
+
+            &:hover {
+              &::after {
+                width: 100%;
+                transition: width 0.2s ease-in-out;
+                height:1px;
+                
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
