@@ -1,9 +1,9 @@
-import { CurrentDates } from "../script/current-dates";
-import { HoverEffect } from "../script/hover";
-import { MobileBurgerMenu } from "../script/mobile-burger-menu";
-import "../style.scss";
+import { CurrentDates } from "../../script/current-dates";
+import { HoverEffect } from "../../script/hover";
+import { MobileBurgerMenu } from "../../script/mobile-burger-menu";
+import "../../style.scss";
 
-export class Insights {
+export class Databricks {
   static init() {
     this.initMaterialInput();
     new HoverEffect(".responsibility", 3, 3);
@@ -12,6 +12,7 @@ export class Insights {
     dates.current();
   }
   static initMaterialInput() {
+    // const inputs = document.querySelectorAll('.form-control input');
     const labels = document.querySelectorAll(".form-control label");
 
     labels.forEach((label) => {
@@ -27,4 +28,4 @@ export class Insights {
   }
 }
 
-Insights.init();
+Databricks.init();

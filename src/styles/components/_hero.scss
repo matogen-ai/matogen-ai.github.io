@@ -18,6 +18,9 @@
 
   scroll-snap-align: start;
 
+  background-image: url('/Matogen-AI-Brain-banner-300x124.jpg');
+  // background-size: cover;
+
   @media screen and (max-width: 840px) {
     background-size: auto 120%;
     background-position: 50% 100%;
