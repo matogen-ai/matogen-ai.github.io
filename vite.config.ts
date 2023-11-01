@@ -19,6 +19,7 @@ export default defineConfig({
         main: resolve(root, "index.html"),
         contactUs: resolve(root, "contact-us", "index.html"),
         altair: resolve(root, "altair", "index.html"),
+        praexia: resolve(root, "partners/praexia", "index.html"),
         emailDisclaimers: resolve(root, "email-disclaimers", "index.html"),
         termsOfService: resolve(root, "terms-of-service", "index.html"),
       },
