@@ -7,7 +7,7 @@
 
   width: 100%;
   min-height: 100vh;
-
+  
   margin-block-start: calc(var(--nav-height) * -1);
 
 
@@ -18,7 +18,7 @@
 
   scroll-snap-align: start;
 
-  background-image: url('/Matogen-AI-Brain-banner-300x124.jpg');
+  background-image: url('/Matogen-AI-Brain-banner.jpg');
   // background-size: cover;
 
   @media screen and (max-width: 840px) {

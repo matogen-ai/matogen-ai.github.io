@@ -147,6 +147,25 @@
   }
 }
 
+.our-short-work-section {
+  
+  @media screen and (min-width: 680px) {
+    scroll-snap-type: y proximity;
+  }
+
+  .section {
+    justify-content: center;
+    align-items: center;
+
+
+    @media screen and (min-width: 680px) {
+      min-height: 65vh;
+      scroll-snap-align: start;
+
+    }
+  }
+}
+
 #our-work {
 
   .cards {
