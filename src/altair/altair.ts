@@ -1,7 +1,7 @@
-import "../../style.scss";
 import { CurrentDates } from "../script/current-dates";
 import { HoverEffect } from "../script/hover";
 import { MobileBurgerMenu } from "../script/mobile-burger-menu";
+import "../style.scss";
 
 export class Databricks {
   static init() {
