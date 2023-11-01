@@ -76,6 +76,11 @@
 
             color: var(--light);
 
+            //set original background color - can't see text if it is see through
+            background: var(--blue-100);
+            opacity: 0.70;
+
+
             @media screen and (min-width: 680px) {
               position: absolute;
               width: 100%;
