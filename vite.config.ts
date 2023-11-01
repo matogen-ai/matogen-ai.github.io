@@ -18,8 +18,9 @@ export default defineConfig({
       input: {
         main: resolve(root, "index.html"),
         contactUs: resolve(root, "contact-us", "index.html"),
-        altair: resolve(root, "altair", "index.html"),
+        altair: resolve(root, "partners/altair", "index.html"),
         praexia: resolve(root, "partners/praexia", "index.html"),
+        databricks: resolve(root, "partners/databricks", "index.html"),
         emailDisclaimers: resolve(root, "email-disclaimers", "index.html"),
         termsOfService: resolve(root, "terms-of-service", "index.html"),
       },
