@@ -21,6 +21,7 @@ export default defineConfig({
         altair: resolve(root, "partners/altair", "index.html"),
         praexia: resolve(root, "partners/praexia", "index.html"),
         databricks: resolve(root, "partners/databricks", "index.html"),
+        insights: resolve(root, "insights", "index.html"),
         emailDisclaimers: resolve(root, "email-disclaimers", "index.html"),
         termsOfService: resolve(root, "terms-of-service", "index.html"),
       },
