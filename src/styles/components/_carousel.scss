@@ -13,6 +13,16 @@
     text-align: center;
 }
 
+.carousel-text-container{
+    height: 55rem;
+    @media screen and (min-width: 400px) {
+        height: 35rem;
+  }
+    @media screen and (min-width: 528px) {
+        height: 20rem;
+  }
+}
+
 .carousel-btn{
    
    background-color: #fff;
