@@ -513,13 +513,8 @@
     <!-- #locations-->
     <h2 id="locations" class="section-title" style="color: #27A8E0">Project locations we've done work in</h2>
     <section id="locations" class="section section--light">
-        <!-- handlebars partial: see src/partials -->
-        <div class="map-container">
-            {{> map-svg }}
-            <div id="location-info" class="location-info">
-                <div />
-            </div>
-        </div>
+    
+        <!--sit code terug vanaf notepadd ++-->
     </section>
     <!-- #endregion -->
 
@@ -528,12 +523,12 @@
         <div class="container">
             <h3 class="section-sub-title">Our leadership</h3>
 
-            <div class="members">
-                <div class="member">
-                    <div class="member-profile-image">
+            <!-- <div class="members"> -->
+                <!-- <div class="member member-parent">
+                    <div class="member-profile-image member-child" style="background-color: pink;">
                         <img src="/jacobus-eksteen.webp" alt="Jacobus Eksteen" />
                     </div>
-                    <div class="member-profile-info">
+                    <div class="member-profile-info member-child" style="background-color:red">
                         <div class="name">Jacobus Eksteen</div>
                         <div class="title">CEO (Data- and Decision Science division)</div>
                         <div class="qualification">
@@ -550,7 +545,7 @@
                             technology.
                         </div>
                     </div>
-                    <div class="expanded-bio">
+                    <div class="expanded-bio member-child" style="background-color:orange;">
                         <div class="name">Jacobus Eksteen</div>
                         <div class="bio">
                             Jacobus has <span data-years-since="2007"></span> years of diverse experience in data science.
@@ -560,16 +555,119 @@
                             approach makes him a leader in the realm of actionable analytics.
                         </div>
                         <div class="read-more js-bio-more">Show less</div>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
 
-                <div class="qualification-mobile">
+
+                <!-- <div class="member">
+                    <div class="parent">
+                      <div class="child">
+                        <img src="/jacobus-eksteen.webp" alt="Jacobus Eksteen" />
+                      </div>
+                      
+                        <div class="child member">
+                            <div class="name">Jacobus Eksteen</div>
+                            <div class="title">CEO (Data- and Decision Science division)</div>
+                            <div class="qualification">
+                                MBA (Masters in Business Administration)<br>
+                                B.Comm Financial Risk Management
+                            </div>
+                            <div class="read-more js-bio-more">Read more</div>
+                            <div class="bio">
+                                Jacobus has <span data-years-since="2007"></span> years of diverse experience in data science.
+                                He excels in
+                                delivering solutions across various industries, notably financial services and agriculture.
+                                A
+                                data-driven approach makes him a transformative leader in the realm of business and
+                                technology.
+                            </div>
+                        </div>
+                      
+                    </div>
+                  </div> -->
+                  <div class="members members--jacobus" style="display: flex;">
+                    <div class="foto">
+                        <img style="max-width: 100%; border-radius: 20px; margin-left: 5px;" src="/jacobus-eksteen.webp" alt="Jacobus Eksteen" />
+                    </div>
+                    <!-- <div class="beskrywing child_a" style="background-color: blue; width: 65%; display: none;">
+                        <div class="name">Jacobus Eksteen</div>
+                        <div class="title">CEO (Data- and Decision Science division)</div>
+                        <div class="qualification">
+                            MBA (Masters in Business Administration)<br>
+                            B.Comm Financial Risk Management
+                        </div>
+                        <div class="bio">
+                            Jacobus has <span data-years-since="2007"></span> years of diverse experience in data science.
+                            He excels in
+                            delivering solutions across various industries, notably financial services and agriculture.
+                            A
+                            data-driven approach makes him a transformative leader in the realm of business and
+                            technology.
+                        </div>
+                    </div> -->
+
+                    <!-- beskrywing -->
+                    <div class="beskrywing child_a member-profile-info">
+                        <div class="name">Jacobus Eksteen</div>
+                        <div class="title">CEO (Data- and Decision Science division)</div>
+                        <div class="qualification">
+                            MBA (Masters in Business Administration)<br>
+                            B.Comm Financial Risk Management
+                        </div>
+                        <div class="bio">
+                            Jacobus has <span data-years-since="2007"></span> years of diverse experience in data science.
+                            He excels in
+                            delivering solutions across various industries, notably financial services and agriculture.
+                            A
+                            data-driven approach makes him a transformative leader in the realm of business and
+                            technology.
+                        </div>
+                    </div>
+
+                    <!-- gaan aan hier -->
+                    <!-- <div class="expanded-bio member-child" style="background-color:orange;">
+                        <div class="name">Jacobus Eksteen</div>
+                        <div class="bio">
+                            Jacobus has <span data-years-since="2007"></span> years of diverse experience in data science.
+                            He excels in
+                            delivering solutions across various industries, notably financial services and agriculture.
+                            A model-driven
+                            approach makes him a leader in the realm of actionable analytics.
+                        </div>
+                        <div class="read-more js-bio-more">Show less</div>
+                    </div> -->
+
+                    <!-- readme -->
+                    <div class="readMe readMe--jacobus" >
+                        <div class="name">Jacobus Eksteen</div>
+                        <div class="title">CEO (Data- and Decision Science division)</div>
+                        
+                        <div class="read-more js-bio-more readMe--link">Read more</div>
+                    </div>
+                  </div>
+                  <div class="qualifications_new">
+                    <div class="qualification">
+                        MBA (Masters in Business Administration)<br>
+                        B.Comm Financial Risk Management
+                        blah
+                        
+                    </div>
+                  </div>
+                 
+                  
+
+
+
+
+
+
+                <!-- <div class="qualification-mobile">
                     MBA (Masters in Business Administration)<br>
                     B.Comm Financial Risk Management
 
-                </div>
+                </div> -->
 
-                <!-- Wim -->
+                <!-- Wim blah - sit terug -->
                 <div class="member">
                     <div class="member-profile-image">
                         <img src="/wim-conradie.webp" alt="Wim Conradie" />
@@ -601,7 +699,7 @@
                     </div>
 
                 </div>
-
+                <!-- blah - sit terug -->
                 <div class="qualification-mobile">
                     MBA (Masters in Business Administration) (Cum Laude)<br>
                     B.Eng Electronic Engineering with Computer Science
