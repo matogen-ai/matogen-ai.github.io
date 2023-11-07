@@ -1,3 +1,7 @@
+
+a-member{
+  background-color: green;
+}
 // .parent {
 //   > .child {
 //     display: inline-block;
@@ -67,7 +71,8 @@
     }
     
     @media screen and (max-width:912px){
-      display: block;}
+      display: block;
+    }
     @media screen and (max-width:373px){
       display: none;
     }
@@ -248,24 +253,24 @@
   }
 
   .member {
-    --member-bg: var(--blue-100);
-    --member-color: var(--light);
+    // --member-bg: var(--blue-100);
+    // --member-color: var(--light);
 
-    position: relative;
-    //display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
+    // position: relative;
+    // //display: flex;
+    // flex-direction: row;
+    // justify-content: flex-start;
+    // align-items: stretch;
 
-    background: var(--member-bg);
-    color: var(--member-color);
+    // background: var(--member-bg);
+    // color: var(--member-color);
 
-    overflow: hidden;
-    border-radius: 20px;
+    // overflow: hidden;
+    // border-radius: 20px;
 
-    @media screen and (min-width: 680px) {
-      border-radius: 0px;
-    }
+    // @media screen and (min-width: 680px) {
+    //   border-radius: 0px;
+    // }
     // .parent {
     //   > .child {
     //     display: inline-block;
@@ -500,6 +505,21 @@
           display: none;
         }
       }
+      #readMe{
+        display: none !important;
+        background-color: pink;
+      }
+
+      
     }
+  }
+}
+
+//blah - play around
+is-expanded{
+  background-color: aliceblue;
+  #readMe{
+    display: none !important;
+    background-color: pink;
   }
 }

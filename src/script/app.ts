@@ -1,27 +1,25 @@
-import { HoverEffect } from "./hover";
-import { CurrentDates } from "./current-dates";
-import { MobileBurgerMenu } from "./mobile-burger-menu";
 import { Carousel } from "./carousel";
-import { SvgMap } from "./svg-map"
+import { CurrentDates } from "./current-dates";
+import { HoverEffect } from "./hover";
+import { MobileBurgerMenu } from "./mobile-burger-menu";
+import { SvgMap } from "./svg-map";
 
 export class App {
   init() {
-    this.preloader()
+    this.preloader();
     this.heroAnimation();
     // this.initSlick();
     this.checkScrollPosition();
-    this.initIndustryScroller()
+    this.initIndustryScroller();
     this.initIndustryExpander();
     this.initBioViewer();
     this.updateDates();
-    
 
     new MobileBurgerMenu().initMobileMenu();
     new HoverEffect(".card");
     new Carousel(5000);
     new SvgMap();
   }
-
 
   private preloader() {
     document.addEventListener("DOMContentLoaded", function () {
@@ -34,10 +32,7 @@ export class App {
           loadingScreen.style.display = "none";
         }, 1500); // Adjust the timing here to match the animation duration
       }, 700);
-
-
     });
-
   }
 
   private heroAnimation() {
@@ -46,7 +41,6 @@ export class App {
 
     const isDesktop = window.innerWidth > 680;
     if (!hero || !isDesktop) return;
-
 
     hero.addEventListener("mousemove", (evt) => {
       const x1 = evt.clientX - window.innerWidth / 2;
@@ -92,19 +86,16 @@ export class App {
   // }
 
   private checkScrollPosition() {
-
     let isDragging = false;
     let startY = 0;
     let startTop = 0;
-
 
     $(".handle").on("mousedown", (e) => {
       isDragging = true;
       startY = e.clientY;
       startTop = parseInt($(".handle").css("top")) || 0;
-      $('.handle').css('cursor', 'grabbing')
+      $(".handle").css("cursor", "grabbing");
     });
-
 
     $(document).on("mousemove", (e) => {
       if (isDragging) {
@@ -112,30 +103,28 @@ export class App {
         const offsetY = e.clientY - startY;
         const newTop = startTop + offsetY;
 
-        const vh = window.innerHeight
-        const minTop = (vh / 6) / 2;
+        const vh = window.innerHeight;
+        const minTop = vh / 6 / 2;
         const maxTop = vh;
         const clampedTop = Math.min(maxTop, Math.max(minTop, newTop));
 
-
         $(".handle").css("top", clampedTop);
 
-
         const divisionSections = $("#our-work-section")?.offset()?.top || 0;
-        const divisionSectionsHeight = $("#our-work-section").outerHeight() || 1;
-        const scrollPosition = ((clampedTop - minTop) / (maxTop - minTop)) * divisionSectionsHeight + divisionSections;
+        const divisionSectionsHeight =
+          $("#our-work-section").outerHeight() || 1;
+        const scrollPosition =
+          ((clampedTop - minTop) / (maxTop - minTop)) * divisionSectionsHeight +
+          divisionSections;
 
         window.scrollTo(0, scrollPosition);
       }
     });
 
-
     $(document).on("mouseup", () => {
       isDragging = false;
-      $('.handle').css('cursor', 'grab')
-
+      $(".handle").css("cursor", "grab");
     });
-
 
     document.addEventListener("scroll", () => {
       const scroll = $(window).scrollTop() || 0;
@@ -146,18 +135,22 @@ export class App {
         return;
       }
 
-      const divisionSectionsBottom = divisionSections + divisionSectionsHeight - divisionSectionsHeight / 6;
+      const divisionSectionsBottom =
+        divisionSections + divisionSectionsHeight - divisionSectionsHeight / 6;
       if (scroll >= divisionSections && scroll <= divisionSectionsBottom) {
         $(".section-progress").addClass("is-visible");
       } else {
         $(".section-progress").removeClass("is-visible");
       }
 
-      const vh = window.innerHeight
-      const firstPosition = (vh / 6) / 2;
+      const vh = window.innerHeight;
+      const firstPosition = vh / 6 / 2;
       const lastPosition = vh;
 
-      const currentPosition = ((scroll - divisionSections) / divisionSectionsHeight) * (lastPosition - firstPosition) + firstPosition;
+      const currentPosition =
+        ((scroll - divisionSections) / divisionSectionsHeight) *
+          (lastPosition - firstPosition) +
+        firstPosition;
 
       $(".handle").css("top", currentPosition);
     });
@@ -167,8 +160,12 @@ export class App {
    * Initialize industry scroller
    */
   private initIndustryScroller() {
-    const motionScroller = document.querySelector(".motion-scroller") as HTMLDivElement;
-    const motionScrollerViewport = document.querySelector(".motion-scroller > .viewport") as HTMLDivElement;
+    const motionScroller = document.querySelector(
+      ".motion-scroller"
+    ) as HTMLDivElement;
+    const motionScrollerViewport = document.querySelector(
+      ".motion-scroller > .viewport"
+    ) as HTMLDivElement;
     if (!motionScroller || !motionScrollerViewport) return;
 
     motionScroller.addEventListener("mousemove", (evt) => {
@@ -180,34 +177,29 @@ export class App {
     });
   }
 
-
-
   private initIndustryExpander() {
-    if (window.innerWidth <= 640) { // mobile breakpoint
+    if (window.innerWidth <= 640) {
+      // mobile breakpoint
       const itemElements = document.querySelectorAll(".item");
       itemElements.forEach((item) => {
         const title = item.querySelector(".title");
 
         if (title) {
-
           title.addEventListener("click", (e) => {
             e.preventDefault();
 
             itemElements.forEach((itemInner) => {
               if (itemInner == item) {
-                itemInner.classList.toggle("open")
+                itemInner.classList.toggle("open");
               } else {
-                itemInner.classList.remove('open')
+                itemInner.classList.remove("open");
               }
-            })
+            });
           });
         }
       });
     }
   }
-
-
-
 
   // /**
   //  * Update dates
@@ -225,7 +217,9 @@ export class App {
   initBioViewer() {
     $(document).on("click", ".js-bio-more", (el) => {
       const currentEl = $(el.target);
-      const parent = currentEl.closest(".member");
+      //blah - sit terug
+      // const parent = currentEl.closest(".member");
+      const parent = currentEl.closest(".a-member");
 
       if (parent.hasClass("is-expanded")) {
         parent.removeClass("is-expanded");
@@ -234,8 +228,4 @@ export class App {
       parent.addClass("is-expanded");
     });
   }
-
-  
-
-
 }
