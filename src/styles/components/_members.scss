@@ -5,7 +5,12 @@
   border: solid;
   padding: 10px  0 25px 0;
   margin-top: 2.5rem;
+  display: flex;
+  
 
+  @media screen and (max-width:785px){
+    justify-content: center;
+  }
   .beskrywing{
     display: block;
     background-color: greenyellow;
@@ -151,6 +156,14 @@
 .member-profile-info{
   &-member_1{
     color: var(--light)
+  }
+}
+
+.member-profile-image{
+  display: block;
+  @media screen and (max-width:785px){
+    display: none;
+    
   }
 }
 
