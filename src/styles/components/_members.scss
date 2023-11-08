@@ -93,7 +93,7 @@
 }
 
 .js-bio-more{
-  background-color: aqua;
+  //background-color: aqua;
 }
 
 .name {
@@ -171,4 +171,17 @@
 
 .y-display{
   display: block !important;
+}
+
+.read-more {
+  display: block;
+
+  margin-block-start: 1.5rem;
+
+  text-decoration: underline;
+  cursor: pointer;
+
+  @media screen and (min-width: 912px) {
+    display: none;
+  }
 }
