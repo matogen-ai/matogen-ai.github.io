@@ -223,9 +223,25 @@ export class App {
 
       if (parent.hasClass("is-expanded")) {
         parent.removeClass("is-expanded");
-        return;
+        //return;
+      } else {
+        parent.addClass("is-expanded");
       }
-      parent.addClass("is-expanded");
+
+      parent.children().each(function () {
+        var expandedBioCard = parent.children(".expanded-bio");
+        var readMoreButton = parent.children(".read-more");
+        var readLessButton = parent.children(".read-less");
+        if (parent.hasClass("is-expanded")) {
+          expandedBioCard.css("display", "block");
+          readLessButton.css("display", "block");
+          readMoreButton.css("display", "none");
+        } else {
+          expandedBioCard.css("display", "none");
+          readLessButton.css("display", "none");
+          readMoreButton.css("display", "block");
+        }
+      });
     });
   }
 }
