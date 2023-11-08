@@ -217,8 +217,6 @@ export class App {
   initBioViewer() {
     $(document).on("click", ".js-bio-more", (el) => {
       const currentEl = $(el.target);
-      //blah - sit terug
-      // const parent = currentEl.closest(".member");
       const parent = currentEl.closest(".a-member");
 
       if (parent.hasClass("is-expanded")) {

@@ -3,7 +3,7 @@
   border-width: 15px;
   border-color: black;
   border: solid;
-  padding: 10px  0 25px 0;
+  //padding: 10px  0 25px 0;
   margin-top: 2.5rem;
   display: flex;
   
@@ -13,8 +13,8 @@
   }
   .beskrywing{
     display: block;
-    background-color: greenyellow;
-    background-color: chartreuse;
+    // background-color: greenyellow;
+    // background-color: chartreuse;
     
     @media screen and (max-width:912px){
       display: none;
@@ -25,6 +25,7 @@
   &--jacobus{
     background: var(--blue-200);
     border-radius: 20px;
+    color: var(--light);
   }
 
  .a-member{
@@ -35,6 +36,7 @@
     display: none;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    
     &--link{
       cursor: pointer;
       text-decoration: underline;
@@ -52,6 +54,7 @@
     &--jacobus{
       color: var(--light);
       font-size: 1.25rem;
+      
       &--title{
         margin-block-start: 0.5rem;
         font-size: 0.875rem;
@@ -88,13 +91,21 @@
     font-size: 1rem;
   }
   }
+
+  .read-more-less{
+    margin-block-start: 1.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+  }
 }
 
 
 
 
 .is-expanded{
-  background-color: aqua;
+ 
 }
 
 .js-bio-more{
@@ -133,6 +144,11 @@
   }        
 }
 
+.bio{
+  //margin-top: 2rem;
+  margin-block-start: 0.5rem;
+}
+
 .qualification {
   display: none;
   margin-block-start: 0.75rem;
@@ -167,14 +183,24 @@
   }
 }
 
+.image{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
 .expanded-bio{
+
   display: none;
-  background-color: greenyellow;
-  background-color: chartreuse;
-  
+  // background-color: greenyellow;
+  // background-color: chartreuse;
+  &--jacobus{
+    font-size: 1.25rem;
+  }
+
   @media screen and (max-width:912px){
     display: none;
-    background-color:orange;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 }
 
