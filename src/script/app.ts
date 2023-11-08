@@ -272,14 +272,21 @@ export class App {
 
     // Define a function that applies styles based on the media query
     function applyStyles(e: any) {
-      if (e.matches) {
-        // If the media query is true, apply the styles
-        document.body.style.backgroundColor = "black";
-      } else {
-        debugger;
-        const bio = e.closest(".expanded-bio");
-        // If the media query is false, apply different styles or remove the styles
-        document.body.style.backgroundColor = "brown";
+      // if (e.matches) {
+      //   //do nothing
+      // } else {
+      //   let smallElement = document.querySelector(".y-display");
+      //   if (smallElement) smallElement.classList.remove("y-display");
+      //   smallElement = document.querySelector(".x-none");
+      //   if (smallElement) smallElement.classList.remove("x-none");
+      //   const parent = document.querySelector(".a-member");
+      //   if (parent) parent.classList.remove("is-expanded");
+      // }
+      if (!e.matches) {
+        ["y-display", "x-none", "is-expanded"].forEach((cls) => {
+          const element = document.querySelector(`.${cls}`);
+          if (element) element.classList.remove(cls);
+        });
       }
     }
 
