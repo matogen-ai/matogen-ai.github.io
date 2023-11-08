@@ -1,8 +1,3 @@
-  
-
-  
-  
-
 .members {
   border-radius: 20px;
   border-width: 15px;
@@ -10,6 +5,17 @@
   border: solid;
   padding: 10px  0 25px 0;
   margin-top: 2.5rem;
+
+  .beskrywing{
+    display: block;
+    background-color: greenyellow;
+    background-color: chartreuse;
+    
+    @media screen and (max-width:912px){
+      display: none;
+      background-color:orange;
+    }
+  }
   
   &--jacobus{
     background: var(--blue-200);
@@ -29,12 +35,14 @@
       text-decoration: underline;
     }
     
-    @media screen and (max-width:912px){
-      display: block;
-    }
     @media screen and (max-width:373px){
       display: none;
     }
+
+    @media screen and (max-width:912px){
+      display: block;
+    }
+    
 
     &--jacobus{
       color: var(--light);
@@ -61,12 +69,106 @@
 
     
   }
+  .footer-qualification{
+    display: block;
+    margin-block-start: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
 
+  @media screen and (max-width: 840px) {
+    font-size: 0.875rem;
+  }
+
+  @media screen and (max-width: 840px) {
+    font-size: 1rem;
+  }
+  }
 }
+
+
+
+
 .is-expanded{
   background-color: aqua;
 }
 
 .js-bio-more{
   background-color: aqua;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  @media screen and (min-width: 680px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 840px) {
+    font-size: 2rem;
+  }
+}
+
+.title {
+  margin-block-start: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  opacity: 0.5;
+
+  @media screen and (min-width: 680px) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (min-width: 840px) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.3rem;
+  }        
+}
+
+.qualification {
+  display: none;
+  margin-block-start: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  @media screen and (min-width: 680px) {
+    display: block;
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: 840px) {
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.15rem;
+  }
+}
+
+.member-profile-info{
+  &-member_1{
+    color: var(--light)
+  }
+}
+
+.expanded-bio{
+  display: none;
+  background-color: greenyellow;
+  background-color: chartreuse;
+  
+  @media screen and (max-width:912px){
+    display: none;
+    background-color:orange;
+  }
+}
+
+.x-none{
+  display: none !important;
+}
+
+.y-display{
+  display: block !important;
 }

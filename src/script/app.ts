@@ -232,16 +232,60 @@ export class App {
         var expandedBioCard = parent.children(".expanded-bio");
         var readMoreButton = parent.children(".read-more");
         var readLessButton = parent.children(".read-less");
+        var readMeSection = parent.children(".readMe");
+
         if (parent.hasClass("is-expanded")) {
-          expandedBioCard.css("display", "block");
+          //word groter. Readme moet hide en bio moet wys
+
+          //expandedBioCard.css("display", "block");
+          expandedBioCard.removeClass("x-none");
+          expandedBioCard.addClass("y-display");
+
           readLessButton.css("display", "block");
           readMoreButton.css("display", "none");
+
+          // hide readMe deel ook hier
+          //readme section moet hide as readme button geclick word
+          //readMeSection.css("display", "none");
+          readMeSection.addClass("x-none");
+          //readMeSection.removeClass("y-display");
         } else {
-          expandedBioCard.css("display", "none");
+          //hy word kleiner. Read me moet terug kom en bio moet hide!!!!!!!
+
+          //expandedBioCard.css("display", "none");
+          expandedBioCard.addClass("x-none");
+          expandedBioCard.removeClass("y-display");
           readLessButton.css("display", "none");
           readMoreButton.css("display", "block");
+          //readMeSection.css("display", "block");
+          readMeSection.removeClass("x-none");
+          //expandedBioCard.addClass("x-display")
+
+          //readMeSection.removeClass("y-display");
+          //readMeSection.addClass("y-display");
         }
       });
     });
+
+    // Define the media query
+    var mediaQuery = window.matchMedia("(max-width: 912px)");
+
+    // Define a function that applies styles based on the media query
+    function applyStyles(e: any) {
+      if (e.matches) {
+        // If the media query is true, apply the styles
+        document.body.style.backgroundColor = "black";
+      } else {
+        debugger;
+        const bio = e.closest(".expanded-bio");
+        // If the media query is false, apply different styles or remove the styles
+        document.body.style.backgroundColor = "brown";
+      }
+    }
+
+    // Attach the function as a listener to be called whenever the media query's result changes
+    mediaQuery.addEventListener("change", applyStyles);
+    // Call the function at run time
+    applyStyles(mediaQuery);
   }
 }
