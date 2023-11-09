@@ -512,11 +512,14 @@
     <!-- #locations-->
     <h2 id="locations" class="section-title" style="color: #27A8E0">Project locations we've done work in</h2>
     <section id="locations" class="section section--light">
-    
-        <!--sit code terug vanaf notepadd ++-->
+            <!-- handlebars partial: see src/partials -->
+            <div class="map-container">
+                {{> map-svg }}
+                <div id="location-info" class="location-info">
+                </div>
+            </div>
     </section>
-    <!-- #endregion -->
-
+   
     <!-- #leadership -->
     <section id="leadership" class="section section--light">
         <div class="container">
