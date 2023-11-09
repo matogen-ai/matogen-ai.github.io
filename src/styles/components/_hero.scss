@@ -118,6 +118,13 @@
     }
 
     .content {
+      @media screen and (max-width:686px){
+        .h1{
+          font-size: 1rem;
+        }  
+      }
+      
+
       position: relative;
       display: flex;
       flex-direction: column;
@@ -137,7 +144,7 @@
       @media screen and (min-width: 840px) {
         flex: 0 0 30vh;
         padding-block: 0;
-       
+        
       }
 
       @media screen and (min-width: 2000px) {
