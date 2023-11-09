@@ -12,14 +12,15 @@
     justify-content: center;
   }
   .beskrywing{
-    display: block;
-    // background-color: greenyellow;
-    // background-color: chartreuse;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     
     
     @media screen and (max-width:912px){
       display: none;
-      background-color:orange;
     }
   }
   
@@ -54,7 +55,11 @@
     }
 
     @media screen and (max-width:912px){
-      display: block;
+      //blah
+      // display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     
 
@@ -173,8 +178,8 @@
 }
 
 .bio{
-  //margin-top: 2rem;
   margin-block-start: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .qualification {
@@ -225,8 +230,6 @@
 .expanded-bio{
 
   display: none;
-  // background-color: greenyellow;
-  // background-color: chartreuse;
   &--jacobus{
     font-size: 1.25rem;
   }
@@ -243,7 +246,10 @@
 }
 
 .y-display{
-  display: block !important;
+  //display: block !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .read-more {
