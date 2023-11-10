@@ -256,7 +256,13 @@
 
   overflow: hidden;
   border-radius: 1rem;
-  margin: 2rem;
+  //margin: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .no-margin-top{
+    margin-top: 0;
+  }
 
   @media screen and (min-width: 840px) {
     grid-template-columns: 2fr;

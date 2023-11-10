@@ -137,12 +137,12 @@
   .section {
     justify-content: center;
     align-items: center;
-
+    padding-top: 5%;
+    padding-bottom: 5%;
 
     @media screen and (min-width: 680px) {
-      min-height: 100vh;
       scroll-snap-align: start;
-
+   
     }
   }
 }
@@ -156,13 +156,22 @@
   .section {
     justify-content: center;
     align-items: center;
-
+    padding-top: 5%;
+    padding-bottom: 5%;
 
     @media screen and (min-width: 680px) {
-      min-height: 65vh;
+      //min-height: 65vh;
       scroll-snap-align: start;
 
     }
+  }
+
+  .no-bottom-space{
+    padding-bottom: 0;
+  }
+
+  .no-top-space{
+    padding-top: 0;
   }
 }
 
