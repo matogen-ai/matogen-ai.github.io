@@ -14,13 +14,33 @@
 }
 
 .carousel-text-container{
-    height: 55rem;
-    @media screen and (min-width: 400px) {
-        height: 35rem;
-  }
-    @media screen and (min-width: 528px) {
-        height: 20rem;
-  }
+    height: 30rem;
+    border-style: solid;
+    border-width: 10px;
+
+    @media screen and (max-width: 528px) {
+        height: 40rem;
+    } 
+
+    @media screen and (max-width: 475px) {
+        height: 50rem;
+    }
+    
+    @media screen and (max-width: 400px) {
+        height: 60rem;
+    }
+
+    @media screen and (max-width: 370px) {
+        height: 70rem;
+    }
+
+    @media screen and (max-width: 350px) {
+        height: 130rem;
+    }
+
+    @media screen and (max-width: 270px) {
+        height: 140rem;
+    }
 }
 
 .carousel-btn{
