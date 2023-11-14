@@ -118,6 +118,10 @@
     }
 
     .content {
+      &--see-through{
+        background-color: rgba(0, 0, 0, 0);
+      }   
+      
       @media screen and (max-width:686px){
         .h1{
           font-size: 1rem;
