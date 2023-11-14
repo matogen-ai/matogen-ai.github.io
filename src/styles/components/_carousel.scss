@@ -15,8 +15,6 @@
 
 .carousel-text-container{
     height: 30rem;
-    border-style: solid;
-    border-width: 10px;
 
     @media screen and (max-width: 528px) {
         height: 40rem;
@@ -25,7 +23,7 @@
     @media screen and (max-width: 475px) {
         height: 50rem;
     }
-    
+
     @media screen and (max-width: 400px) {
         height: 60rem;
     }
