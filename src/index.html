@@ -20,7 +20,21 @@
         content="Matogen, Cloud Solutions, Cloud Services, Software Development, Needs Analysis, System Analysis, 
         Technical Documentation, Data Wrangling, Predictive Modeling, Data Visualisation, Data Extraction, 
         Digital Strategy, AI, Machine Learning, Web Design, UI/UX Design, Brand Identity" />
-</head>
+        <style>
+            @keyframes bounce {
+    
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+    
+                50% {
+                    transform: scale(1.2);
+                }
+            }
+        </style>
+    
+    </head>
 
 <body>
     <div class="preloader" id="preloader"
@@ -29,7 +43,7 @@
             alt="Matogen Group Logo" />
     </div>
 
-    <style>
+    <!-- <style>
         @keyframes bounce {
 
             0%,
@@ -41,7 +55,7 @@
                 transform: scale(1.2);
             }
         }
-    </style>
+    </style> -->
 
 
 
@@ -59,7 +73,7 @@
                 </a>
 
             </div>
-            <button title="Menu" class="hamburger js-mobile-menu-toggle" type="button">
+            <button aria-label="Menu" class="hamburger js-mobile-menu-toggle" type="button">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -314,29 +328,55 @@
     </div>
 
     <!-- #Industries of expertise -->
-    <section id="industries" class="section section--light industries">
-        <h2 class="section-title">Industries of expertise</h2>
+    <section id="industries" class="section section--dark industries">
+        <div class="container">
+            <div class="panel-single-column">
+                <div class="panel-content">
+                    <h2 class="">We apply insights across different sectors</h2>
 
-        <div class="motion-scroller">
+                    <p>In an age where all commercial activity is driven by data, Matogen AI’s analytical and predictive capabilities are valued across various sectors. We
+                        believe that any data can be used to create insights and improve the efficiency, productivity, and profitability of any business.
+                    </p>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="motion-scroller space-bottom">
             <div class="viewport">
                 <div class="content">
-                    <!-- Fintech -->
+
                     <div class="item item--fintech">
                         <div class="title"><span>Fintech</span></div>
                         <div class="description">
-                            Driven by innovation, we develop cutting-edge software that empowers financial institutions to
-                            optimise
-                            operations, enhance security, and elevate customer experiences.
+                            <p>
+                                Driven by innovation, we develop cutting-edge software that empowers financial institutions to
+                                optimise operations, enhance security, and elevate customer experiences.
+                                <span>
+                                    <br /><br />
+                                    <a class="button" href="/industries/fintech/" target="_blank"
+                                      >Read more</a
+                                    >
+                                  </span>
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Agritech -->
                     <div class="item item--agritech">
                         <div class="title"><span>Agritech</span></div>
                         <div class="description">
-                            Committed to agriculture, we combine traditional practices with tech-driven, efficient, and
-                            eco-conscious
-                            processes, bolstering global food security.
+                            <p>
+                                Committed to agriculture, we combine traditional practices with tech-driven, efficient, and
+                                eco-conscious
+                                processes, bolstering global food security.
+                                <span>
+                                    <br /><br />
+                                    <a class="button" href="/industries/agritech/" target="_blank"
+                                      >Read more</a
+                                    >
+                                  </span>
+                            </p>
+                            
                         </div>
                     </div>
 
@@ -344,13 +384,29 @@
                     <div class="item item--healthcare">
                         <div class="title"><span>Healthcare</span></div>
                         <div class="description">
-                            Merging predictive analytics with machine learning, we design bespoke solutions that transform healthcare in the digital era — optimising diagnostics, elevating care, and crafting pioneering pathways.
+                            <p>
+                                Merging predictive analytics with machine learning, we design bespoke solutions that transform healthcare in the digital era — optimising diagnostics, elevating care, and crafting pioneering pathways.
+                                <span>
+                                    <br /><br />
+                                    <a class="button" href="/industries/healthcare/" target="_blank"
+                                      >Read more</a
+                                    >
+                                  </span>
+                            </p>
+                            
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+        
     </section>
     <!-- #endregion -->
 
