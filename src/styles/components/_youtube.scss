@@ -1,8 +1,34 @@
 .video-container {
     position: relative;
-    width: 50rem;
-    padding-bottom: 17%; /* 16:9 aspect ratio (adjust as needed) */
-    height: 25rem;
+    width: 35%;
+    aspect-ratio: 1 / 0.75;
+        
+    @media screen and (max-width:1000px){
+        width: 50%;
+        aspect-ratio: 1 / 1;
+    }
+    
+    @media screen and (max-width:500px){
+        width: 75%;
+        aspect-ratio: 1 / 1;
+    }
+
+    @media screen and (max-width:400px){
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    } 
+}
+
+.video-container-in-small-container {
+    position: relative;
+    width: 55%;
+    aspect-ratio: 1 / 0.75;
+    
+    @media screen and (max-width:600px){
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+ 
 }
 
 // /* Style the iframe to fill the video container */
