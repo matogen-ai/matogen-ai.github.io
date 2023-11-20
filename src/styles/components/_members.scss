@@ -1,9 +1,7 @@
 .members {
-  border-radius: 20px;
   border-width: 15px;
   border-color: black;
   border: solid;
-  //padding: 10px  0 25px 0;
   margin-top: 2.5rem;
   display: flex;
   
@@ -11,7 +9,7 @@
   @media screen and (max-width:785px){
     justify-content: center;
   }
-  .beskrywing{
+  .description{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,13 +24,11 @@
   
   &--member1{
     background: var(--blue-200);
-    border-radius: 20px;
     color: var(--light);
   }
 
   &--member2{
     background: var(--light);
-    border-radius: 20px;
     color: var(--blue-200);
   }
 
@@ -110,22 +106,6 @@
     }
   }
 
-  // .footer-qualification{
-  //   display: block;
-  //   margin-block-start: 0.75rem;
-  //   font-size: 0.875rem;
-  //   font-weight: 500;
-  //   background-color: brown;
-
-  // @media screen and (max-width: 840px) {
-  //   font-size: 0.875rem;
-  // }
-
-  // @media screen and (max-width: 840px) {
-  //   font-size: 1rem;
-  // }
-  // }
-
   .read-more-less{
     margin-block-start: 1.5rem;
     text-decoration: underline;
@@ -133,14 +113,6 @@
     font-size: 1.25rem;
     padding-bottom: 10px;
   }
-}
-
-.is-expanded{
- 
-}
-
-.js-bio-more{
-  //background-color: aqua;
 }
 
 .name {
@@ -222,8 +194,6 @@
 
 .image{
   height: 100%;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
 }
 
 .expanded-bio{
@@ -245,7 +215,6 @@
 }
 
 .y-display{
-  //display: block !important;
   display: flex;
   flex-direction: column;
   justify-content: center;

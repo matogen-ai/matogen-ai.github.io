@@ -80,8 +80,8 @@
             color: var(--light);
 
             //set original background color - can't see text if it is see through
-            background: var(--blue-100);
-            opacity: 0.70;
+            background: var(--blue-200);
+            opacity: 0.90;
 
 
             @media screen and (min-width: 680px) {
@@ -111,9 +111,9 @@
               will-change: opacity;
               transition: opacity 0.2s ease-in-out;
 
-              @media screen and (min-width: 680px) {
-                height: 100%;
-              }
+              // @media screen and (min-width: 680px) {
+              //   height: 100%;
+              // }
             }
           }
           .description {
