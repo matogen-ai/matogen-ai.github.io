@@ -32,7 +32,6 @@ export class SvgMap {
   }
 
   private setupHoverHandlersByPathId(country: Country) {
-    debugger;
     console.log("blah blah 22");
     //blah
     const path: any = document.getElementById(country.pathId);
