@@ -7,13 +7,14 @@
 }
 
 .quote-marks {
-    
-    
-    
-
     img{
+
         width:70px;
         height:70px;
+        @media screen and (max-width: 570px) {
+            width:35px;
+            height:35px;
+        }
     }
 
     &.right{
