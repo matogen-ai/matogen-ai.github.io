@@ -75,12 +75,39 @@ export class SvgMap {
         path.ownerSVGElement.createSVGTransformFromMatrix(newTransformMatrix)
       );
 
-      infoSection?.replaceChildren(document.createTextNode(country.name));
-      //to continue - blah
-      // let h3 = document.createElement("h3");
-      // h3.textContent = "Your text here blah blah";
-      // infoSection?.appendChild(h3);
-      // if (infoSection) infoSection.style.float = "left";
+      let header = document.createElement('h4');
+      header.textContent = country.name;
+      header.style.textAlign = 'left';
+      
+      
+      // Create a new div element for the grid container
+      let gridContainer = document.createElement('div');
+      gridContainer.style.display = 'flex'; // use flexbox layout
+      gridContainer.style.justifyContent = 'space-between'; // add space between columns
+
+      // Create new div elements for each column
+      let column1 = document.createElement('div');
+      column1.style.display = 'inline-block';
+      column1.style.marginRight = '1rem';
+      column1.textContent = 'Consulting';
+      gridContainer.appendChild(column1);
+
+      let column2 = document.createElement('div');
+      column2.style.display = 'inline-block'; 
+      column2.style.marginRight = '1rem';
+      column2.textContent = 'System Solutions';
+      gridContainer.appendChild(column2);
+
+
+      let column3 = document.createElement('div');
+      column3.textContent = 'Artificial intelligence';
+      column3.style.display = 'inline-block'; 
+      gridContainer.appendChild(column3);
+      
+      infoSection?.appendChild(header);
+      infoSection?.appendChild(gridContainer);
+
+      if (infoSection) infoSection.style.float = "left";
     });
 
     // Define the mouseleave event handler (to reset on hover out)
@@ -91,7 +118,10 @@ export class SvgMap {
       path.transform.baseVal.initialize(
         path.ownerSVGElement.createSVGTransformFromMatrix(originalTransform)
       );
-      infoSection?.removeChild(infoSection.firstChild!);
+      while (infoSection?.firstChild) {
+        infoSection.firstChild.remove();
+    }
+    
     });
   }
 }

@@ -67,37 +67,11 @@ carousel-btn:hover {
 .quote p {
     font-size: 1.3rem;
     line-height: 1.5;
-    
-    //leave this commented parts. Might have to change again
-    // @media screen and (max-width: 528px) {
-    //     font-size: 1.3rem;
-    //     line-height: 1.5;
-    // } 
-
-    // @media screen and (max-width: 475px) {
-    //     font-size: 1.3rem;
-    //     line-height: 1.5;
-    // }
-
-    // @media screen and (max-width: 400px) {
-    //     font-size: 1.3rem;
-    //     line-height: 1.5;
-    // }
 
     @media screen and (max-width: 370px) {
         font-size: 1.0rem;
         line-height: 1.2;
     }
-
-    // @media screen and (max-width: 350px) {
-    //     font-size: 1.3rem;
-    //     line-height: 1.5;
-    // }
-
-    // @media screen and (max-width: 270px) {
-    //     font-size: 1.3rem;
-    //     line-height: 1.5;
-    // }
 }
 
 .author {

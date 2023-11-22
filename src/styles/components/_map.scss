@@ -2,6 +2,7 @@
   position: relative;
   width: 1000px;
   height: 500px;
+  margin-bottom: 5rem;
 }
 
 .map-container svg {
@@ -13,6 +14,15 @@
   transition: transform 0.5s;
 }
 
-.location-info {
-  
+.display-section{
+  display: flex;
+  @media screen and (max-width: 975px) {
+    display: None;
+}
+}
+
+.display-header{
+  @media screen and (max-width: 975px) {
+    display: None;
+}
 }
