@@ -9,21 +9,24 @@ export class SvgMap {
     this.initMap();
   }
 
+  smallCountries = ["Israel", "Malta", "Malawi"];
+  mediumCountries = ["United Kingdom", "Botswana", "Zambia"];
+
   private initMap() {
     const COUNTRIES_OF_INTEREST: Country[] = [
       { name: "South-Africa", code: "ZA", pathId: "ZA-2" },
       { name: "United States", code: "US", pathId: "Path_145-2" },
-      { name: "Nigeria", code: "NG", pathId: "NG-2" }, //Nigeria
+      { name: "Nigeria", code: "NG", pathId: "NG-2" },
       { name: "Australia", code: "AU", pathId: "Path_43-2" },
-      { name: "Botswana", code: "BW", pathId: "BW-2" }, //Botswana
-      { name: "Zambia", code: "ZM", pathId: "ZM-2" }, //Zambia
-      { name: "Kenya", code: "KE", pathId: "KE-2" }, //Kenya
-      { name: "India", code: "IN", pathId: "IN-2" }, //India
-      { name: "Sweden", code: "SE", pathId: "SE-2" }, //Sweden
-      { name: "United Kingdom", code: "UK", pathId: "Path_81-2" }, //UK
-      { name: "Malawi", code: "MW", pathId: "MW-2" }, //Malawi
-      { name: "Malta", code: "MT", pathId: "Path_97-2" }, //Malta
-      { name: "Israel", code: "IL", pathId: "IL-2" }, //Israel
+      { name: "Botswana", code: "BW", pathId: "BW-2" },
+      { name: "Zambia", code: "ZM", pathId: "ZM-2" },
+      { name: "Kenya", code: "KE", pathId: "KE-2" },
+      { name: "India", code: "IN", pathId: "IN-2" },
+      { name: "Sweden", code: "SE", pathId: "SE-2" },
+      { name: "United Kingdom", code: "UK", pathId: "Path_81-2" },
+      { name: "Malawi", code: "MW", pathId: "MW-2" },
+      { name: "Malta", code: "MT", pathId: "Path_97-2" },
+      { name: "Israel", code: "IL", pathId: "IL-2" },
     ];
 
     COUNTRIES_OF_INTEREST.forEach((country) => {
@@ -32,8 +35,6 @@ export class SvgMap {
   }
 
   private setupHoverHandlersByPathId(country: Country) {
-    console.log("blah blah 22");
-    //blah
     const path: any = document.getElementById(country.pathId);
     const infoSection = document.getElementById("location-info");
     if (!path) return;
@@ -42,7 +43,7 @@ export class SvgMap {
 
     path.classList.add("path-transition");
     // Define the hover event handler
-    path.addEventListener("mouseenter", function () {
+    path.addEventListener("mouseenter", () => {
       // move hover item to last element of child to render on top of others
       path.parentElement.appendChild(path);
 
@@ -54,11 +55,16 @@ export class SvgMap {
 
       // change fill to country flag
       path.setAttribute("fill", "url(#pattern-" + country.code + ")");
-      // path.setAttribute("fill", "#000");
 
       // Create a new transformation for scaling
       const scaleTransform = path.ownerSVGElement.createSVGTransform();
-      scaleTransform.setScale(1.2, 1.2);
+
+      if (this.smallCountries.includes(country.name))
+        scaleTransform.setScale(10, 10);
+      else if (this.mediumCountries.includes(country.name))
+        scaleTransform.setScale(5, 5);
+      else scaleTransform.setScale(1.2, 1.2);
+
       // Add new transform to original transform
       const newTransformMatrix = originalTransform.multiply(
         scaleTransform.matrix

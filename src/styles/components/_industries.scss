@@ -60,6 +60,10 @@
             flex: 0 0 16%;
           }
 
+          .title-anchor{
+            text-decoration: none;
+          }
+          
           .title {
             position: static;
             bottom: 0;
@@ -116,6 +120,7 @@
               // }
             }
           }
+
           .description {
             position: static;
             top: 0;
@@ -167,6 +172,7 @@
               font-size: 1.5rem;
             }
           }
+
           @media screen and (min-width: 680px) {
             &:hover{
             height: auto;
