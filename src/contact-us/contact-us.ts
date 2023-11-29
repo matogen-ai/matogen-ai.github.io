@@ -15,7 +15,7 @@ export class ContactUs {
         let element = document.querySelector('#dialog_place_holder');
         if (element !== null) {
             //insert the dialog html where the element placeholder is
-            fetch('../partials/dialog.html')
+            fetch('../partials/dialog/index.html')
                 .then(response => response.text())
                 .then(data => {
                     element!.innerHTML = data;
