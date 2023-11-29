@@ -11,16 +11,6 @@ export class ContactUs {
         const dates = new CurrentDates();
         dates.current();
         this.confirmation();
-
-        let element = document.querySelector('#dialog_place_holder');
-        if (element !== null) {
-            //insert the dialog html where the element placeholder is
-            fetch('../partials/dialog/index.html')
-                .then(response => response.text())
-                .then(data => {
-                    element!.innerHTML = data;
-                });
-        }
     }
 
     static initMaterialInput() {
