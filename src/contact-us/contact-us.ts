@@ -39,8 +39,6 @@ export class ContactUs {
             const subject = $("#subject").val()
             const message = $("#message").val()
             
-
-            debugger
             var url = "https://api.smtp2go.com/v3/email/send";
             console.log(formData)
             $.ajax({
