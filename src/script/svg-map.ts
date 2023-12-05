@@ -10,7 +10,7 @@ export class SvgMap {
   }
 
   smallCountries = ["Israel", "Malta", "Malawi"];
-  mediumCountries = ["United Kingdom", "Botswana", "Zambia"];
+  mediumCountries = ["United Kingdom", "Botswana", "Zambia","Sweden"];
 
   private initMap() {
     const COUNTRIES_OF_INTEREST: Country[] = [
@@ -60,9 +60,9 @@ export class SvgMap {
       const scaleTransform = path.ownerSVGElement.createSVGTransform();
 
       if (this.smallCountries.includes(country.name))
-        scaleTransform.setScale(10, 10);
+        scaleTransform.setScale(3.6, 3.6);
       else if (this.mediumCountries.includes(country.name))
-        scaleTransform.setScale(5, 5);
+        scaleTransform.setScale(2.4, 2.4);
       else scaleTransform.setScale(1.2, 1.2);
 
       // Add new transform to original transform

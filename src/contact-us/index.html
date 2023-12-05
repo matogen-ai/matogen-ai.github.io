@@ -13,6 +13,7 @@
         content="Corporate Social Responsibility, Community Support, Charity Partnerships, Brain Development, Homeless Support, Education Empowerment, Community Upliftment, Youth Development, Feeding Programs, Internet Opportunities, Nature Conservation, Couples' Recovery, Art & Culture Promotion, Paracycling, Unbiased Information, Christian Organisation, Corona Tracking App">
     <meta name="description"
         content="Discover Matogen's deep commitment to Corporate Social Responsibility. Our support and engagement with various organisations span brain development, homeless support, education empowerment, community upliftment, youth development, feeding programs, internet opportunities, nature conservation, couples' recovery, art and culture promotion, and more.">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 
 <body>
@@ -54,7 +55,7 @@
         </ul>
     </nav>
 
-    <section id="contact-form" class="section section--light">
+    <section id="contact-form_" class="section section--light">
 
         <div class="contact-headings">
             <h2 class="section-title contact-title">Got questions?</h2>
@@ -62,7 +63,7 @@
         </div>
 
         <form id="contact-form" class="contact-form">
-
+            
             <div class="user-section">
 
                 <div class="email-icon">
@@ -99,11 +100,10 @@
 
                 <div class="submit-button">
                     <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                        <div class="h-captcha" data-sitekey="b2c0a7a2-18b1-4672-b64d-3dcee04cf58d"></div>
                     </div>
                     <button id="submit" type="submit">Submit</button>
                 </div>
-
             </div>
 
             <div class="company-section">
@@ -111,11 +111,11 @@
                 <div class="company-details">
                     <img src="/location-icon.svg" style="width: 35px; height:50px; position: relative; "
                         alt="location-icon" />
-                    <p class="company-text" style="color:white">Unit 2<br>
-                        Meson Street <br>
-                        Technopark<br>
-                        Stellenbosch<br>
-                        7600
+
+                    <p class="company-text" style="color:white">2 MAKOU STREET<br>
+                        POTCHEFSTROOM <br>
+                        NORTH WEST<br>
+                        2531<br>
                     </p>
                 </div>
 
@@ -191,7 +191,7 @@
                     <ul>
                         <li><a target="blank" href="/#locations">Locations we've worked in</a></li>
                         <li><a target="blank" href="/#leadership">Our Team</a></li>
-                        <li><a target="blank" href="https://www.linkedin.com/company/matogen-applied-insights/">LinkedIN</a></li>
+                        <li><a target="blank" href="https://www.linkedin.com/company/matogen-applied-insights/">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
@@ -213,7 +213,14 @@
     <!-- #endregion -->
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
-    <script type="module" src="./contact-us.ts"></script>
+    <script type="module" src="./contact-us.ts">
+        function onCaptchaSuccess() {
+           console.log("hier gaan hy in - blah")
+           var formGroup = document.querySelector('.form-group');
+           formGroup.style.display = 'none';
+        }
+    </script>
+    
 </body>
 
 </html>
