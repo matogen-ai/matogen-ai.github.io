@@ -27,66 +27,6 @@ export class ContactUs {
          
     }
 
-    static confirmation_old(){
-        $(document).on("click", "#submit", function(event) {
-            // Prevent the form from being submitted normally
-            event.preventDefault();
-        
-            // Get the form data
-            var formData = $("#contact-form").serialize();
-            const name = $("#name").val() 
-            const email = $("#email").val()
-            const subject = $("#subject").val()
-            const message = $("#message").val()
-            
-            var url = "https://api.smtp2go.com/v3/email/send";
-            console.log(formData)
-            $.ajax({
-                type: "POST",
-                url: url,
-                //data: formData,
-                
-                data: JSON.stringify({
-                    'api_key': "api-EB04D9C48DB44BFFBA4B67B6EAA0CBE7",
-                    'sender': "sydney.fryer@ai.matogen.com",
-                    'to': [
-                      "sydney.fryer@ai.matogen.com"
-                    ],
-                    'subject': "From Matogen AI website",
-                    'html_body': `
-                    <p>Name: <i>${name}</i></p>
-                    <p>Email: <i>${email}</i></p>
-                    <p>Subject: <i>${subject}</i></p>
-                    <p>Message: <i>${message}</i></p>`
-                  }),
-                headers: {
-                    'Content-Type': "application/json"
-                  },
-                success: function() {
-                //complete: function() {
-                    var modal = document.getElementById("dialogModal");
-        
-                    if (modal !== null) {
-                        modal.style.display = "block";
-        
-                        // Get the <span> element that closes the modal
-                        var span = document.getElementsByClassName("close")[0] as HTMLElement;
-                        span.onclick = function() {
-                            if (modal !== null)
-                                modal.style.display = "none";
-                        }                        // When the user clicks anywhere outside of the modal, close it
-                
-                        window.onclick = function(event) {
-                            if (modal !== null && event.target == modal) {
-                                modal.style.display = "none";
-                            }
-                        }
-                    }
-                }
-            });
-        });
-    }
-
     static confirmation() {
         var modal = document.getElementById("dialogModal");
         var form = document.getElementById("contact-form") as HTMLFormElement; 

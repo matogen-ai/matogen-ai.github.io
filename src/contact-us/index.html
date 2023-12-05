@@ -43,9 +43,6 @@
                     alt="Matogen Group Logo" /></a>
         </div>
 
-
-
-
         <ul>
             <li><a class="js-nav-item" href="/index.html#home">Home</a></li>
             <li><a class="js-nav-item" href="/#our-work">Our Work</a></li>
@@ -99,10 +96,11 @@
                 </div>
 
                 <div class="submit-button">
+                    <button style="background-color: lightgray;" id="submit" type="submit" disabled>Submit</button>
                     <div class="form-group">
                         <div class="h-captcha" data-sitekey="b2c0a7a2-18b1-4672-b64d-3dcee04cf58d" data-callback="onCaptchaSuccess"></div>
                     </div>
-                    <button id="submit" type="submit">Submit</button>
+                
                 </div>
             </div>
 
@@ -218,6 +216,9 @@
         function onCaptchaSuccess() {
            var formGroup = document.querySelector('.form-group');
            formGroup.style.display = 'none';
+           var button = document.getElementById("submit");
+           button.disabled = false;
+           button.style.backgroundColor = "var(--blue-200)";
         }
     </script>
 </body>
