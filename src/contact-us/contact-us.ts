@@ -122,7 +122,7 @@ export class ContactUs {
                         'Content-Type': "application/json"
                       },
                     success: function(data) {
-                        //blah - remove this
+                        //blah - remove this -
                         console.log(data)
                         // If the API call is successful, display the dialog box
                         if(modal!==null)
