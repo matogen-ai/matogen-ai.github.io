@@ -74,54 +74,68 @@ export class SvgMap {
       path.transform.baseVal.initialize(
         path.ownerSVGElement.createSVGTransformFromMatrix(newTransformMatrix)
       );
+  var mapContainer = document.getElementById("map-container");
 
-      let header = document.createElement('h4');
-      header.textContent = country.name;
-      header.style.textAlign = 'left';
-      
-      
-      // Create a new div element for the grid container
-      let gridContainer = document.createElement('div');
-      gridContainer.style.display = 'flex'; // use flexbox layout
-      gridContainer.style.justifyContent = 'space-between'; // add space between columns
+  let parentContainer = document.createElement('div');
+  parentContainer.style.position = 'absolute';
+  parentContainer.style.top = '0';
+  parentContainer.style.left = '0';
+  parentContainer.style.right = '0';
+  parentContainer.style.margin = 'auto';
 
-      // Create new div elements for each column
-      let column1 = document.createElement('div');
-      column1.style.display = 'inline-block';
-      column1.style.marginRight = '1rem';
-      column1.textContent = 'Consulting';
-      gridContainer.appendChild(column1);
+  let header = document.createElement('h4');
+  header.textContent = country.name;
+  header.style.textAlign = 'center';
+  parentContainer.appendChild(header); // Append the header to the parent container
 
-      let column2 = document.createElement('div');
-      column2.style.display = 'inline-block'; 
-      column2.style.marginRight = '1rem';
-      column2.textContent = 'System Solutions';
-      gridContainer.appendChild(column2);
+  // Create a new div element for the grid container
+  let gridContainer = document.createElement('div');
+  gridContainer.style.display = 'flex'; // use flexbox layout
+  gridContainer.style.justifyContent = 'space-between'; // add space between columns
+  parentContainer.appendChild(gridContainer); // Append the grid container to the parent container
+
+  // Append the parent container to the map container
+  if(mapContainer!=null)
+    mapContainer.appendChild(parentContainer);
 
 
-      let column3 = document.createElement('div');
-      column3.textContent = 'Artificial intelligence';
-      column3.style.display = 'inline-block'; 
-      gridContainer.appendChild(column3);
-      
-      infoSection?.appendChild(header);
-      infoSection?.appendChild(gridContainer);
+        // Create new div elements for each column
+        let column1 = document.createElement('div');
+        column1.style.display = 'inline-block';
+        column1.style.marginRight = '1rem';
+        column1.textContent = 'Consulting';
+        gridContainer.appendChild(column1);
 
-      if (infoSection) infoSection.style.float = "left";
-    });
+        let column2 = document.createElement('div');
+        column2.style.display = 'inline-block'; 
+        column2.style.marginRight = '1rem';
+        column2.textContent = 'System Solutions';
+        gridContainer.appendChild(column2);
+
+
+        let column3 = document.createElement('div');
+        column3.textContent = 'Artificial intelligence';
+        column3.style.display = 'inline-block'; 
+        gridContainer.appendChild(column3);
+        
+        infoSection?.appendChild(header);
+        infoSection?.appendChild(gridContainer);
+
+        if (infoSection) infoSection.style.float = "left";
+      });
 
     // Define the mouseleave event handler (to reset on hover out)
-    path.addEventListener("mouseleave", function () {
-      path.setAttribute("fill", "#27a8e0");
+      path.addEventListener("mouseleave", function () {
+        path.setAttribute("fill", "#27a8e0");
 
-      // Reset the transformation to the identity matrix (no transformation)
-      path.transform.baseVal.initialize(
-        path.ownerSVGElement.createSVGTransformFromMatrix(originalTransform)
-      );
-      while (infoSection?.firstChild) {
-        infoSection.firstChild.remove();
-    }
-    
-    });
+        // Reset the transformation to the identity matrix (no transformation)
+        path.transform.baseVal.initialize(
+          path.ownerSVGElement.createSVGTransformFromMatrix(originalTransform)
+        );
+        while (infoSection?.firstChild) {
+          infoSection.firstChild.remove();
+      }
+      
+      });
   }
 }

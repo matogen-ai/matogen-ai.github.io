@@ -3,6 +3,7 @@
   width: 1000px;
   height: 500px;
   margin-bottom: 5rem;
+  padding-top: 10%;
 }
 
 .map-container svg {
@@ -25,4 +26,15 @@
   @media screen and (max-width: 975px) {
     display: None;
 }
+  padding-bottom: 0;
+}
+
+#locations{
+  position: relative;
+  color:var(--blue-200)
+}
+
+#location-info{
+  position: absolute; 
+  top: 0;
 }

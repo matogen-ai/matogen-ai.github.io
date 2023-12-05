@@ -557,16 +557,15 @@
     <!-- #endregion -->
 
     <!-- #locations-->
-    <h2 id="locations" class="section-title display-header" style="color: #27A8E0">Project Locations</h2>
+    <h2 id="locations" class="section-title display-header">Project Locations</h2>
     <section id="locations" class="section section--light display-section">
-            <!-- handlebars partial: see src/partials -->
-            <div class="map-container">
-                {{> map-svg }}
-                <div id="location-info" class="location-info">
-                </div>
-            </div>
-    </section>
-   
+        <div id="map-container" class="map-container">
+          {{> map-svg }}
+        </div>
+        <div id="location-info" class="location-info">
+        </div>
+      </section>
+      
     <!-- #leadership -->
     <section id="leadership" class="section section--light">
         <div class="container">
