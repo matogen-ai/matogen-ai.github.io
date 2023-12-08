@@ -40,29 +40,22 @@ export class ContactUs {
                 const subject = $("#subject").val()
                 const message = $("#message").val()
                 
-                var url = "https://api.smtp2go.com/v3/email/send";
-                // Make the API call
+                var url = "https://mai-test1.azurewebsites.net/email";
+                 
                 $.ajax({
                     url: url, 
                     type: 'POST',
                     data: JSON.stringify({
-                        'api_key': "api-EB04D9C48DB44BFFBA4B67B6EAA0CBE7",
-                        'sender': "sydney.fryer@ai.matogen.com",
-                        'to': [
-                          "sydney.fryer@ai.matogen.com"
-                        ],
-                        'subject': "From Matogen AI website",
-                        'html_body': `
-                        <p>Name: <i>${name}</i></p>
-                        <p>Email: <i>${email}</i></p>
-                        <p>Subject: <i>${subject}</i></p>
-                        <p>Message: <i>${message}</i></p>`
+                        "name": name,
+                        "email": email,
+                        "subject": subject,
+                        "message": message
                       }),
                       headers: {
-                        'Content-Type': "application/json"
-                      },
+                                 'Content-Type': "application/json"
+                               },
+                      
                     success: function(data) {
-                        //blah - remove this -
                         console.log(data)
                         // If the API call is successful, display the dialog box
                         if(modal!==null)
@@ -73,7 +66,6 @@ export class ContactUs {
                         span.onclick = function() {
                             if(modal!==null)
                                 modal.style.display = "none";
-                            // Submit the form
                             if (form!==null)
                                 form.requestSubmit();
                         }
@@ -95,7 +87,7 @@ export class ContactUs {
             });
         }
     }
-    
+
 }
     
 
