@@ -42,6 +42,14 @@ export class ContactUs {
                 
                 var url = "https://mai-test1.azurewebsites.net/email";
                  
+                $(document).ajaxStart(function() {
+                    // Show the loader when an AJAX request starts
+                    $("#loader").show();
+                }).ajaxStop(function() {
+                    // Hide the loader when all AJAX requests have completed
+                    $("#loader").hide();
+                });
+                
                 $.ajax({
                     url: url, 
                     type: 'POST',

@@ -53,7 +53,6 @@
     </nav>
 
     <section id="contact-form_" class="section section--light">
-
         <div class="contact-headings">
             <h2 class="section-title contact-title">Got questions?</h2>
             <h3 class="contact-subtext">We've got answers - let's chat!</h3>
@@ -81,7 +80,7 @@
                     
 
                 </div>
-
+                <div id="loader"></div>
                 <div class="user-message">
 
                     <div class="form-control">
@@ -94,8 +93,9 @@
                         <label for="message">Message:</label>
                     </div>
                 </div>
-
+                
                 <div class="submit-button">
+                    
                     <button style="background-color: lightgray;" id="submit" type="submit" disabled>Submit</button>
                     <div class="form-group">
                         <div class="h-captcha" data-sitekey="b2c0a7a2-18b1-4672-b64d-3dcee04cf58d" data-callback="onCaptchaSuccess"></div>
