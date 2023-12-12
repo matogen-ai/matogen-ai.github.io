@@ -94,14 +94,17 @@
                     </div>
                 </div>
                 
-                <div class="submit-button">
-                    
-                    <button style="background-color: lightgray;" id="submit" type="submit" disabled>Submit</button>
-                    <div class="form-group">
-                        <div class="h-captcha" data-sitekey="b2c0a7a2-18b1-4672-b64d-3dcee04cf58d" data-callback="onCaptchaSuccess"></div>
+                <div style="text-align: center; display: flex; flex-direction: column; align-items: center; width: 50%; margin: auto;">
+                    <div class="form-group" style="position: relative; top: 0;">
+                        <div style="position: relative" class="h-captcha" data-sitekey="b2c0a7a2-18b1-4672-b64d-3dcee04cf58d" data-callback="onCaptchaSuccess">
+                        </div>
                     </div>
-                
+                    <div class="submit-button" style="position: relative; top: 0;" >
+                        <button style="background-color: lightgray;" id="submit" type="submit" disabled hidden>Submit</button>
+                    </div>
                 </div>
+                
+                                
             </div>
 
             <div class="company-section">
@@ -218,7 +221,9 @@
            formGroup.style.display = 'none';
            var button = document.getElementById("submit");
            button.disabled = false;
+           button.hidden = false;
            button.style.backgroundColor = "var(--blue-200)";
+
         }
     </script>
 </body>

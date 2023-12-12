@@ -30,7 +30,6 @@ export class Carousel {
     }
 
     nextQuote(): void {
-        console.log('next')
         this.slideIndex++;
         if (this.slideIndex >= (this.quotes?.length||0)) {
             this.slideIndex = 0;

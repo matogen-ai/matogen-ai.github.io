@@ -1,7 +1,6 @@
 export class MobileBurgerMenu {
   initMobileMenu() {
     $(document).on("click", ".js-mobile-menu-toggle", (el) => {
-      console.log('toets')
       const nav = $(el.target).closest(".navigation");
       if (nav.hasClass("is-open")) {
         nav.removeClass("is-open");
