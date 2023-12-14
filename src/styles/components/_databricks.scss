@@ -18,13 +18,16 @@
 
 .partner_image_header{
   display: inline-block;
+  height: 80px;
   
 
   @media screen and (max-width:500px){
-    display: none;  
+    display: none;
   }
-  //height: 10rem; 
-  // display: inline-block;
+
+  @media screen and (max-width:737px){
+    height: 50px;  
+  }
 
 }
 
