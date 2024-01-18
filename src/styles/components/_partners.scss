@@ -344,34 +344,41 @@
   
 }
 
-#partner_mai_altair {
+#partner_mai {
   margin: 0 auto;
   width: 100%;
   border-collapse: collapse;
 }
 
-#partner_mai_altair .table-cell {
-  border-right: 1px solid black;
+#partner_mai .table-cell {
   padding: 5px;
   text-align: center;
-  width: 50%;
-  
+  width: 48%;
 }
 
-#partner_mai_altair .image-container {
+#partner_mai .table-cell-border {
+  border-right: 1px solid black;
+}
+
+#partner_mai .image-container {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-#partner_mai_altair .image {
+#partner_mai .right-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#partner_mai .image {
   max-width: 100%;
   height: 30%;
 }
 
-#partner_mai_altair .right-image-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+#partner_mai .separator {
+  width: 5%;
+  color: gray;
 }
 
