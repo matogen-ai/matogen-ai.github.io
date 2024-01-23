@@ -366,11 +366,21 @@
   justify-content: flex-end;
 }
 
+#partner_mai .right-space {
+  margin-right: 5%;
+}
+
+
 #partner_mai .right-image-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
+
+#partner_mai .left-space {
+  margin-left: 5%;
+}
+
 
 #partner_mai .image {
   max-width: 100%;
