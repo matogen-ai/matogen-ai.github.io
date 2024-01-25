@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+      .hidden {display:none;}
+    </style>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +37,13 @@
                 }
             }
         </style>
-    
+        <script type="text/javascript">
+            $('html').addClass('hidden');
+            $(window).on('load', function() {
+              $('html').removeClass('hidden');
+            });
+          </script>
+        <script type="module" src="./main.ts"></script>
     </head>
 
 <body>
@@ -289,7 +299,7 @@
             <div class="panel-single-column">
                 <div class="panel-content">
                     <h2>Applying Insights Across Sectors</h2>
-                    <p>In an age where all commercial activity is driven by data, Matogen Applied Insights’s analytical and predictive capabilities are valued across various sectors. We
+                    <p>In an age where all commercial activity is driven by data, Matogen Applied Insights’ analytical and predictive capabilities are valued across various sectors. We
                         believe that any data can be used to create insights and improve the efficiency, productivity, and profitability of any business.
                     </p>
                 </div>
@@ -374,7 +384,7 @@
             <div class="panel panel--with-footer">
                 <div class="panel-content">
                     <p>
-                        <!-- In an age where all commercial activity is driven by data, Matogen Applied Insights’s analytical and predictive capabilities are valued across various sectors. We
+                        <!-- In an age where all commercial activity is driven by data, Matogen Applied Insights’ analytical and predictive capabilities are valued across various sectors. We
                         believe that any data can be used to create insights and improve the efficiency, productivity, and profitability of any business. -->
                         We are at the forefront of solving problems in innovative ways. Here we go into more detail
                         about how we do that in various industries, businesses and scenarios.
@@ -724,7 +734,8 @@
 
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="module" src="./main.ts"></script>
+    <!-- blah -->
+    <!-- <script type="module" src="./main.ts"></script> -->
     <script type="f8055daf4d2fee297e1f69e9-text/javascript">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}

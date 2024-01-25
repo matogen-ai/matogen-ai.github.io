@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+      .hidden {display:none;}
+    </style>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../../favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,6 +23,13 @@
       name="description"
       content="Discover Matogen's deep commitment to Corporate Social Responsibility. Our support and engagement with various organisations span brain development, homeless support, education empowerment, community upliftment, youth development, feeding programs, internet opportunities, nature conservation, couples' recovery, art and culture promotion, and more."
     />
+    <script type="text/javascript">
+      $('html').addClass('hidden');
+      $(window).on('load', function() {
+        $('html').removeClass('hidden');
+      });
+    </script>
+    <script type="module" src="./praexia.ts"></script>
   </head>
 
   <body>
@@ -237,7 +248,5 @@ Property rental agencies
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
-    <script type="module" src="./praexia.ts"></script>
-
   </body>
 </html>
