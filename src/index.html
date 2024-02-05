@@ -80,10 +80,6 @@
             <a href="/index.html#home" target="blank"><img src="/matogen-logo-white-nav.svg"
                     alt="Matogen Group Logo" /></a>
         </div>
-
-
-
-
         <ul>
             <li><a class="js-nav-item" href="/index.html#home">Home</a></li>
             <li><a class="js-nav-item" href="/#our-work">Our Work</a></li>
@@ -134,41 +130,6 @@
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/c348F6Olamk" frameborder="0" allowfullscreen></iframe>
         </div>
-
-        <div class="company-values">
-            <h3>Company Values</h3>
-            <div class="values">
-                <div class="value">
-                    <div class="icon"><img src="/integrity.svg" alt="Integrity" /></div>
-                    <div class="label">Integrity</div>
-                </div>
-                <div class="value">
-                    <div class="icon"><img src="/honesty.svg" alt="Honesty" /></div>
-                    <div class="label">Honesty</div>
-                </div>
-                <div class="value">
-                    <div class="icon"><img src="/transparency.svg" alt="transparency" /></div>
-                    <div class="label">Transparency</div>
-                </div>
-                <div class="value">
-                    <div class="icon"><img src="/efficiency.svg" alt="Efficiency" /></div>
-                    <div class="label">Efficiency</div>
-                </div>
-                <div class="value">
-                    <div class="icon"><img src="/creativity.svg" alt="Sustainability" /></div>
-                    <div class="label">Sustainability</div>
-                </div>
-                <div class="value">
-                    <div class="icon"><img src="/creativity.svg" alt="Creativity" /></div>
-                    <div class="label">Creativity</div>
-                </div>
-                <div class="value">
-                    <div class="icon"><img src="/respect.svg" alt="Respect" /></div>
-                    <div class="label">Respect</div>
-                </div>
-            </div>
-        </div>
-
     </section>
     
    
@@ -484,6 +445,17 @@
     <!-- #endregion -->
 
 
+    <!-- #locations-->
+    <h2 id="locations" class="section-title display-header">Project Locations</h2>
+    <section id="locations" class="section section--light display-section">
+        <div id="map-container" class="map-container">
+          {{> map-svg }}
+        </div>
+        <div id="location-info" class="location-info">
+        </div>
+      </section>
+      
+      
     <!-- #region philosophies -->
     <section class="section section--light">
         <div class="container container--philosophies">
@@ -527,22 +499,50 @@
             </div>
         </div>
     </section>
-    <!-- #endregion -->
 
-    <!-- #locations-->
-    <h2 id="locations" class="section-title display-header">Project Locations</h2>
-    <section id="locations" class="section section--light display-section">
-        <div id="map-container" class="map-container">
-          {{> map-svg }}
+    <!-- #endregion -->
+      <section class="section section--light">
+        <div class="company-values">
+            <h2 class="section-title">Company Values</h2>
+            <div class="values">
+                <div class="value">
+                    <div class="icon"><img src="/integrity.svg" alt="Integrity" /></div>
+                    <div class="label">Integrity</div>
+                </div>
+                <div class="value">
+                    <div class="icon"><img src="/honesty.svg" alt="Honesty" /></div>
+                    <div class="label">Honesty</div>
+                </div>
+                <div class="value">
+                    <div class="icon"><img src="/transparency.svg" alt="transparency" /></div>
+                    <div class="label">Transparency</div>
+                </div>
+                <div class="value">
+                    <div class="icon"><img src="/efficiency.svg" alt="Efficiency" /></div>
+                    <div class="label">Efficiency</div>
+                </div>
+                <div class="value">
+                    <div class="icon"><img src="/creativity.svg" alt="Sustainability" /></div>
+                    <div class="label">Sustainability</div>
+                </div>
+                <div class="value">
+                    <div class="icon"><img src="/creativity.svg" alt="Creativity" /></div>
+                    <div class="label">Creativity</div>
+                </div>
+                <div class="value">
+                    <div class="icon"><img src="/respect.svg" alt="Respect" /></div>
+                    <div class="label">Respect</div>
+                </div>
+            </div>
         </div>
-        <div id="location-info" class="location-info">
-        </div>
-      </section>
-      
+
+    </section>
+    
+  
     <!-- #leadership -->
     <section id="leadership" class="section section--light">
         <div class="container">
-            <h3 class="section-sub-title">Our leadership</h3>
+            <h2 class="section-title">Our leadership</h2>
                   <div class="members members--member1 a-member" style="display: flex;">
                     <div class="member-profile-image">
                         <img class="image"  src="/jacobus-eksteen.webp" alt="Jacobus Eksteen" />
@@ -734,8 +734,6 @@
 
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- blah -->
-    <!-- <script type="module" src="./main.ts"></script> -->
     <script type="f8055daf4d2fee297e1f69e9-text/javascript">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
