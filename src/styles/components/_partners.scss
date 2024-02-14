@@ -351,7 +351,6 @@
 }
 
 #partner_mai .table-cell {
-  padding: 5px;
   text-align: center;
   width: 48%;
 }
@@ -368,6 +367,10 @@
 
 #partner_mai .right-space {
   margin-right: 5%;
+}
+
+#partner_mai .center {
+  justify-content: center;
 }
 
 
