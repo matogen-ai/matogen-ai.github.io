@@ -26,11 +26,11 @@
     });
   </script>
   
-  <script type="module" crossorigin src="/assets/databricks-c7864611.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/current-dates-5c46e3b0.js">
+  <script type="module" crossorigin src="/assets/databricks-7bae1ce5.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/current-dates-a267fa94.js">
   <link rel="modulepreload" crossorigin href="/assets/hover-e283d302.js">
   <link rel="modulepreload" crossorigin href="/assets/mobile-burger-menu-fc3612c9.js">
-  <link rel="stylesheet" href="/assets/current-dates-1319abeb.css">
+  <link rel="stylesheet" href="/assets/current-dates-a0226b97.css">
 </head>
 
 <body>
@@ -291,7 +291,6 @@
     </section>
 
   </div>
-  <a href="#" class="back-to-top"  title="Back to top">Go to top &uarr;</a>
 
   <footer class="section section--blue footer-copyright">
     <div class="container">
@@ -303,21 +302,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
-  <script>
-    window.addEventListener("scroll", function () {
-      var sectionIds = ["#financial-services", "#data-analytics","#agriculture","#predictions","#research","#analytics","#technical"];
-      var backToTopButton = document.querySelector(".back-to-top");
-
-      var isAnySectionInViewPort = sectionIds.some(function (sectionId) {
-        var section = document.querySelector(sectionId);
-        var rect = section.getBoundingClientRect();
-        return rect.top < window.innerHeight && rect.bottom >= 0;
-      });
-
-      if (window.innerWidth < 962 || !isAnySectionInViewPort) { backToTopButton.style.display = "none"; } else {
-        backToTopButton.style.display = "block";
-      }
-    }); </script>
 </body>
 
 </html>
