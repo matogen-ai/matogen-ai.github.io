@@ -1,0 +1,209 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+
+  width: 100%;
+  min-height: 100vh;
+  
+  margin-block-start: calc(var(--nav-height) * -1);
+
+
+  background-color: black;
+  background-size: auto 100%;
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+
+  scroll-snap-align: start;
+
+  background-image: url('/Matogen-AI-Brain-banner.jpg');
+  
+  @media screen and (max-width: 840px) {
+    background-size: auto 120%;
+    background-position: 50% 100%;
+
+  }
+
+  @media screen and (min-width: 1100px) {
+  }
+
+  @media screen and (min-width: 1490px) {
+  }
+
+  /* CSS for video and overlay */
+  .video-home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Adjust the height as needed */
+    overflow: hidden;
+  }
+
+  .video-home video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the entire container */
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the color and opacity as needed */
+  }
+
+
+
+  &-content {
+    // position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    margin-bottom: 5rem;
+    position: absolute;   
+    z-index: 1; 
+    margin-left: 0;
+    margin-right: 0;
+    
+
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+
+      flex: 0 0 50vh;
+
+      position: relative;
+      width: calc(100% - 1rem);
+
+
+
+      @media screen and (min-width: 680px) {
+
+        width: calc((1147 / 1920) * 90vw);
+      }
+
+      @media screen and (min-width: 2000px) {
+
+        width: calc((1147 / 1920) * 75vw);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-block-end: 1rem;
+
+        @media screen and (min-width: 480px) {
+          margin-block-end: 0;
+        }
+      }
+
+
+
+
+    }
+
+    .content {
+      &--see-through{
+        background-color: rgba(0, 0, 0, 0);
+      }   
+      
+      @media screen and (max-width:686px){
+        .h1{
+          font-size: 1rem;
+        }  
+      }
+      
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      gap: 2rem;
+
+      flex: 0 0 30vh;
+      width: 100%;
+
+      margin-block-start: 3rem;
+      padding-block: 1rem;
+
+      color: var(--light);
+      text-align: center;
+
+      @media screen and (min-width: 840px) {
+        flex: 0 0 30vh;
+        padding-block: 0;
+        
+      }
+
+      @media screen and (min-width: 2000px) {
+        flex: 0 0 15vh;
+        padding-block: 0;
+      }
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+
+        width: 100%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      h1,
+      a {
+        position: relative;
+        z-index: 2;
+      }
+
+      h1 {
+        max-width: calc(100% - 2rem);
+        margin: 0;
+        margin-top: 30px;
+        font-size: 2rem;
+        font-weight: 350;
+
+
+        line-height: 1.5;
+
+        @media screen and (min-width: 680px) {
+          max-width: 60%;
+          font-size: 1.3rem;
+        }
+
+        @media screen and (min-width: 840px) {
+          max-width: 65%;
+          font-size: 1.5rem;
+        }
+
+        @media screen and (min-width: 1100px) {
+          max-width: 55%;
+          font-size: 1.5rem;
+        }
+
+      }
+    }
+  }
+
+
+}

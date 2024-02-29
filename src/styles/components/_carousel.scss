@@ -1,0 +1,96 @@
+
+.carousel-container {
+    width: 100%;
+    // ***************alles shift agv verskillende groottes**********
+    max-width: 600px;
+  
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+   
+    border-radius: 5px;
+   
+    text-align: center;
+}
+
+.carousel-text-container{
+    //might come back
+    // height: 30rem;
+
+    // @media screen and (max-width: 528px) {
+    //     height: 40rem;
+    // } 
+
+    // @media screen and (max-width: 475px) {
+    //     height: 50rem;
+    // }
+
+    // @media screen and (max-width: 400px) {
+    //     height: 60rem;
+    // }
+
+    // @media screen and (max-width: 370px) {
+    //     height: 70rem;
+    // }
+
+    // @media screen and (max-width: 350px) {
+    //     height: 130rem;
+    // }
+
+    // @media screen and (max-width: 270px) {
+    //     height: 140rem;
+    // }
+}
+
+.carousel-btn{
+   
+   background-color: #fff;
+    
+}
+
+.controls{
+    display: flex;
+    justify-content: space-around;
+}
+
+carousel-btn:hover {
+    background-color: #e9e9e9;
+}
+
+
+
+.quote {
+    display: none; /* Hide all quotes by default */
+    padding: 20px;
+}
+
+.quote p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+
+    @media screen and (max-width: 370px) {
+        font-size: 1.0rem;
+        line-height: 1.2;
+    }
+}
+
+.author {
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+/* Add animation for the carousel */
+.quote.active {
+    display: block;
+    animation: fadeInOut 5s linear infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+}

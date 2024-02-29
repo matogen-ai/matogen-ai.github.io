@@ -1,0 +1,154 @@
+.black-background{
+  background-color: black;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+
+  gap: 1.875rem;
+
+  margin: 0 1.875rem;
+
+
+  
+}
+.card {
+  --card-size: calc((100% - (1.875rem * 2)) / 3);
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  flex: 0 0 var(--card-size);
+  min-width: var(--card-size);
+  max-width: var(--card-size);
+
+  // padding: 1.875rem;
+
+  aspect-ratio: 1;
+  border-radius: 0.625rem;
+
+  font-size: 1.875rem;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+
+  background: var(--blue-100);
+  color: var(--light);
+
+  will-change: color, background;
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+
+  perspective: 500px;
+  perspective-origin: center center;
+  transform-style: preserve-3d;
+  transform: perspective(500px);
+
+  // @media screen and (min-width: 720px) {
+  //   --card-size: calc((100% - (1.875rem * 3)) / 4);    
+  // }
+
+  // @media screen and (min-width: 1100px) {
+  //   --card-size: calc((100% - (1.875rem * 5)) / 6);
+  // }
+  // @media screen and (min-width: 2700px) {
+  //   --card-size: calc((100% - (1.875rem * 5)) / 7);    
+  // }
+
+  > * {
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &::before {
+    content: attr(data-initials);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    font-size: max(4rem, 6vw);
+    font-weight: 600;
+
+    opacity: 0.15;
+
+    will-change: color;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .icon {
+    transform: translateZ(0px);
+
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .label {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+
+    padding-inline: 2rem;
+    font-size: min(2rem, 4.5vw);
+
+    transform: translateZ(0px);
+
+    transition: transform 0.2s ease-in-out;
+
+    @media screen and (min-width: 480px) {
+      font-size: min(2rem, 4vw);
+    }
+
+    @media screen and (min-width: 720px) {
+      font-size: min(2rem, 2.2vw);
+    }
+
+    @media screen and (min-width: 1100px) {
+      font-size: max(1rem, 1.6vw);
+    }
+
+    @media screen and (min-width: 2000px) {
+      font-size: max(1rem, 1.1vw);
+    }
+
+    @media screen and (min-width: 2700px) {
+      font-size: max(1rem, 1vw);
+    }
+    
+  }
+
+  .since-text{
+    position: absolute;
+    bottom: -25px;
+    color: rgba(0, 0, 0, 0.5);
+    
+
+    font-size:1rem;
+
+      @media screen and (min-width: 1100px) {
+        bottom: -30px;
+        font-size:1.1rem;
+             
+      }
+
+      @media screen and (min-width: 2000x) {
+        bottom: -35px;
+        font-size:1.25rem;
+             
+      }
+  }
+
+  &:hover {
+    .label,
+    .icon {
+      transform: translateZ(15px);
+    }
+  }
+}

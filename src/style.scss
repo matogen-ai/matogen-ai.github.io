@@ -1,0 +1,62 @@
+// Plugins
+@import "./node_modules/normalize.css/normalize";
+
+// Variables, fonts, mixins
+@import "./styles/variables";
+@import "./styles/font/mona-sans";
+@import "./styles/utils/typography";
+@import "./styles/utils/themes";
+
+// Components
+@import "./styles/components/container";
+@import "./styles/components/navigation";
+@import "./styles/components/hero";
+@import "./styles/components/buttons";
+@import "./styles/components/logo-slider";
+@import "./styles/components/section";
+@import "./styles/components/section-progress";
+@import "./styles/components/card";
+@import "./styles/components/values";
+@import "./styles/components/panel";
+@import "./styles/components/industries";
+@import "./styles/components/mission";
+@import "./styles/components/partners";
+@import "./styles/components/contact";
+@import "./styles/components/members";
+@import "./styles/components/footer";
+@import "./styles/components/philosophies";
+
+@import "./styles/components/tabs";
+@import "./styles/components/youtube";
+@import "./styles/components/carousel";
+@import "./styles/components/testimonial";
+@import "./styles/components/map";
+@import "./styles/components/contact-us";
+@import "./styles/components/insights";
+@import "./styles/components/databricks";
+@import "./styles/components/dialog";
+
+
+
+@import "./styles/components/pages/hero";
+@import "./styles/components/pages/intro";
+@import "./styles/components/pages/more";
+
+
+
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  line-height: 1.2;
+
+  scroll-behavior: smooth;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

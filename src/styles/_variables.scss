@@ -1,0 +1,38 @@
+:root {
+  --light: #fff;
+  --light-100: #f6f6f6;
+  --light-500: #707070;
+  --light-700: #545454;
+  --dark-100: #1d1f20;
+  --dark-300: #004c82;
+  --dark-700: #000;
+
+  --blue-50:  #6ACEFF;
+  --blue-100: #459ed8;
+  --blue-200:#27A8E0;
+  --blue-500: #005aa7;
+  --blue-700: #003461; 
+
+
+  --font-base: "Mona-Sans", sans-serif;
+  --font-accent: "Nunito", sans-serif;
+  --font-base-size: 16px;
+
+  --nav-height: 80px;
+  --nav-color: var(--light);
+  --nav-color-hover: var(--light);
+  --nav-bg: var( --blue-700);
+  --nav-opacity: 0.45;
+  --nav-item-fs: 1rem;
+
+  --btn-height: 45px;
+
+  @media screen and (min-width: 670px) {
+    --nav-item-fs: 1.2rem;
+  }
+
+  @media screen and (min-width: 800px) {
+    --nav-height: 80px;
+    --nav-item-fs: 1.2rem;
+  }
+}
