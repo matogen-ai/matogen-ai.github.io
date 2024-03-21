@@ -33,11 +33,11 @@
         $('html').removeClass('hidden');
       });
     </script> -->
-  <script type="module" crossorigin src="/assets/altair-7bae1ce5.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/current-dates-a267fa94.js">
+  <script type="module" crossorigin src="/assets/altair-766266e7.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/current-dates-3e8b53d5.js">
   <link rel="modulepreload" crossorigin href="/assets/hover-e283d302.js">
   <link rel="modulepreload" crossorigin href="/assets/mobile-burger-menu-fc3612c9.js">
-  <link rel="stylesheet" href="/assets/current-dates-a0226b97.css">
+  <link rel="stylesheet" href="/assets/current-dates-984a6e80.css">
 </head>
 
 <body>
@@ -138,6 +138,24 @@
         </div>
       </div>
     </section>
+
+    <!-- The overview section to be uncommented as soos as altair provides overview video -->
+    <!-- <section id="overview" class="section section--blue partners altair no-bottom-space">
+      <div class="container">
+        <div class="panel-single-column">
+          <div class="panel-content">
+            <h2 class="section-title h2-custom">Overview</h2>
+          <div class="video-container-in-small-container">
+              <iframe width="560" height="315" src="https://altair.com/company?wvideo=hxdbhjiw5m"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
 
     <section id="products" class="section section--light partners altair no-bottom-space">
       <h2 class="section-title h2-custom">Products</h2>
@@ -400,7 +418,7 @@
       </div>
     </section>
   </div>
-  <a href="#" id="back-to-top" title="Back to top">Go to top &uarr;</a>
+  <a href="#" class="back-to-top" title="Back to top">Go to top &uarr;</a>
 
   <footer class="section section--blue footer-copyright">
     <div class="container">
@@ -418,7 +436,7 @@
     <!--show up button -->
     window.addEventListener("scroll", function () {
       var sectionIds = ["#rapid-miner", "#monarch", "#slc", "#panopticon"];
-      var backToTopButton = document.querySelector("#back-to-top");
+      var backToTopButton = document.querySelector(".back-to-top");
 
       var isAnySectionInViewPort = sectionIds.some(function (sectionId) {
         var section = document.querySelector(sectionId);
