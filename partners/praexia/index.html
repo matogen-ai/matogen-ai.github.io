@@ -26,11 +26,11 @@
     });
   </script>
   
-  <script type="module" crossorigin src="/assets/praexia-a5bd2afa.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/current-dates-a267fa94.js">
+  <script type="module" crossorigin src="/assets/praexia-9214192b.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/current-dates-3e8b53d5.js">
   <link rel="modulepreload" crossorigin href="/assets/hover-e283d302.js">
   <link rel="modulepreload" crossorigin href="/assets/mobile-burger-menu-fc3612c9.js">
-  <link rel="stylesheet" href="/assets/current-dates-a0226b97.css">
+  <link rel="stylesheet" href="/assets/current-dates-984a6e80.css">
 </head>
 
 <body>
@@ -182,7 +182,7 @@ Property rental agencies
         </div>
     </section>
 
-    <section id="data-engineering" class="section section--div-light partners no-top-space no-bottom-space">
+    <section id="clients" class="section section--div-light partners no-top-space no-bottom-space">
       <div class="container container--offset">
         <div class="panel-single-column">
           <div class="panel-content">
@@ -207,7 +207,7 @@ Property rental agencies
       </div>
     </section>
 
-    <section id="data-engineering" class="section section--dark partners">
+    <section id="our-work" class="section section--dark partners">
       <div class="container container--offset">
         <div class="panel-single-column">
           <div class="panel-content">
@@ -231,7 +231,7 @@ Property rental agencies
     </section>
 
   </div>
-
+  <a href="#" class="back-to-top"  title="Back to top">Go to top &uarr;</a>
   <footer class="section section--blue footer-copyright">
     <div class="container">
       <p>
@@ -242,6 +242,22 @@ Property rental agencies
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+  <script>
+    window.addEventListener("scroll", function () {
+      var sectionIds = ["#data-science","#data-analytics","#data-analytics","#clients","#our-work"];
+      var backToTopButton = document.querySelector(".back-to-top");
+
+      var isAnySectionInViewPort = sectionIds.some(function (sectionId) {
+        var section = document.querySelector(sectionId);
+        var rect = section.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom >= 0;
+      });
+
+      if (window.innerWidth < 962 || !isAnySectionInViewPort) { backToTopButton.style.display = "none"; } else {
+        backToTopButton.style.display = "block";
+      }
+    }); 
+    </script>
 </body>
 
 </html>
